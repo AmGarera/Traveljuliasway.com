@@ -10,21 +10,24 @@
 
 		<header class="header">
 			{% block header %}
-                <div class="row blue" style="opacity: 1;">
-                    <div class="col s1" style="max-height: 120px">
-                        <h1 class="hdr-logo" role="banner" style="height: 120px; width: 120px">
+                <div class="row grey z-depth-1" style="opacity: 1; margin: 0">
+                    <div class="col green hide-on-small-only" style="height: 128px; width: 128px; padding: 0%">
 
-                        </h1>
                     </div>
 
-                    <div class="col s11">
-                        <nav id="nav-main" class="nav-main transparent z-depth-0">
+                    <div class="col right">
+                        <nav id="nav-main" class="nav-main nav-wrapper transparent z-depth-0">
                             {% include "contact.twig" with {'menu': menu.get_items} %}
                         </nav><!-- #nav -->
-                        <nav id="nav-sub" class="nav-main transparent z-depth-0" role="navigation">
+                        <nav id="nav-main" class="nav-main nav-wrapper transparent z-depth-0">
                             {% include "menu.twig" with {'menu': menu.get_items} %}
                         </nav><!-- #nav -->
                     </div>
+                </div>
+                <div class="row">
+                    <nav id="nav-main" class="nav-main nav-wrapper indigo z-depth-0" style="height: 10px">
+
+                    </nav><!-- #nav -->
                 </div>
 			{% endblock %}
 		</header>
