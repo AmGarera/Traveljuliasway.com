@@ -1,0 +1,53 @@
+{% extends "base.twig" %}
+
+{% block content %}
+{#Slider#}
+    <div class="slider">
+        <ul class="slides">
+            <li><img src="http://lorempixel.com/580/250/nature/1" /> <!-- random image -->
+                <div class="caption center-align">
+                    <h3>This is our big Tagline!</h3>
+                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                </div></li>
+            <li><img src="http://lorempixel.com/580/250/nature/2" /> <!-- random image -->
+                <div class="caption left-align">
+                    <h3>Left Aligned Caption</h3>
+                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                </div></li>
+            <li><img src="http://lorempixel.com/580/250/nature/3" /> <!-- random image -->
+                <div class="caption right-align">
+                    <h3>Right Aligned Caption</h3>
+                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                </div></li>
+            <li><img src="http://lorempixel.com/580/250/nature/4" /> <!-- random image -->
+                <div class="caption center-align">
+                    <h3>This is our big Tagline!</h3>
+                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                </div></li>
+        </ul>
+    </div>
+<div style="background-color: lightgrey">
+    <section class="container"> <H5>IF YOU'RE THE KIND OF TRAVELER WHO:</H5>
+    <ul>
+        <li>Wants to experience the true destination, not just the tourist traps</li>
+        <li>Wants to travel in a relaxed fashion, allowing for plenty of time to explore with all five senses</li>
+        <li>Doesn't want to do what "everyone else does", yet still wants to understand why the famous things are important</li>
+        <li></li>
+
+
+    </ul>
+
+
+    </section>
+</div>
+    {#<div class="content-wrapper center container">#}
+        {#<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">#}
+            {#<section class="article-content left-align">#}
+                {#<h1 class="article-h1">{{post.title}}</h1>#}
+                {#<div class="article-body">#}
+                    {#{{post.content}}#}
+                {#</div>#}
+            {#</section>#}
+        {#</article>#}
+    {#</div><!-- /content-wrapper -->#}
+{% endblock %}
