@@ -16,12 +16,12 @@
                     </div>
 
                     <div class="col right">
-                        <nav id="nav-main" class="nav-main nav-wrapper transparent z-depth-0">
-                            {% include "contact.twig" with {'menu': menu.get_items} %}
-                        </nav><!-- #nav -->
-                        <nav id="nav-main" class="nav-main nav-wrapper transparent z-depth-0">
-                            {% include "menu.twig" with {'menu': menu.get_items} %}
-                        </nav><!-- #nav -->
+                        <div class="row" style="height: 10px;">
+                            {% include "contact.twig" %}
+                        </div>
+                        <div class="row">
+                            {% include "menu.twig"%}
+                        </div>
                     </div>
                 </div>
                 <div class="row">
