@@ -20,3 +20,8 @@
 .grey-background {
 background-color: #ebecec;
 }
+
+
+.remove-all-styles {
+    all: revert;
+}
