@@ -3,10 +3,10 @@
 {% block content %}
 {#Slider#}
     <!-- Place somewhere in the <body> of your page -->
-    <div class="flexslider resize">
+    <div class="flexslider card-image">
         <ul class="slides">
             <li data-thumb="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/BEL%2B-%2BBurssels%2B-%2BGrand%2BPlace6.jpg">
-                <img src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/BEL%2B-%2BBurssels%2B-%2BGrand%2BPlace6.jpg" />
+                <img class="responsive-img" src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/BEL%2B-%2BBurssels%2B-%2BGrand%2BPlace6.jpg" />
                 <p class="flex-caption">Adventurer Cheesecake Brownie</p>
             </li>
             <li data-thumb="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/AT%2B-%2BVienna%2Bx2%2B01.jpg">
@@ -17,31 +17,26 @@
         </ul>
     </div>
 
-
-    {#<div class="slider">#}
-        {#<ul class="slides">#}
-            {#<li><img src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/BEL%2B-%2BBurssels%2B-%2BGrand%2BPlace6.jpg" /> <!-- random image -->#}
-                {#<div class="caption left-align">#}
-                    {#<h3>Left Aligned Caption</h3>#}
-                    {#<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>#}
-                {#</div></li>#}
-            {#<li><img src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/AT%2B-%2BVienna%2Bx2%2B01.jpg" /> <!-- random image -->#}
-                {#<div class="caption center-align">#}
-                    {#<h3>This is our big Tagline!</h3>#}
-                    {#<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>#}
-                {#</div></li>#}
-
-            {#<li><img src="http://lorempixel.com/580/250/nature/3" /> <!-- random image -->#}
-                {#<div class="caption right-align">#}
-                    {#<h3>Right Aligned Caption</h3>#}
-                    {#<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>#}
-                {#</div></li>#}
-            {#<li><img src="http://lorempixel.com/580/250/nature/4" /> <!-- random image -->#}
-                {#<div class="caption center-align">#}
-                    {#<h3>This is our big Tagline!</h3>#}
-                    {#<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>#}
-                {#</div></li>#}
-        {#</ul>#}
+    {#<div class="carousel carousel-slider center" data-indicators="true">#}
+        {#<div class="carousel-fixed-item center">#}
+            {#<a class="btn waves-effect white grey-text darken-text-2">button</a>#}
+        {#</div>#}
+        {#<div class="carousel-item red white-text" href="#one!">#}
+            {#<h2>First Panel</h2>#}
+            {#<img class="responsive-img" src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/BEL%2B-%2BBurssels%2B-%2BGrand%2BPlace6.jpg" />#}
+        {#</div>#}
+        {#<div class="carousel-item amber white-text" href="#two!">#}
+            {#<h2>Second Panel</h2>#}
+            {#<p class="white-text">This is your second panel</p>#}
+        {#</div>#}
+        {#<div class="carousel-item green white-text" href="#three!">#}
+            {#<h2>Third Panel</h2>#}
+            {#<p class="white-text">This is your third panel</p>#}
+        {#</div>#}
+        {#<div class="carousel-item blue white-text" href="#four!">#}
+            {#<h2>Fourth Panel</h2>#}
+            {#<p class="white-text">This is your fourth panel</p>#}
+        {#</div>#}
     {#</div>#}
 <div class="grey-background">
     <section class="container"> <H5 class="blue-font" >IF YOU'RE THE KIND OF TRAVELER WHO:</H5>
@@ -59,7 +54,7 @@
 
     <div class="clearfix mb2" style="border-bottom: #3c4768 20px">
         {#TODO CSS Ribbon Goes here or IMG File whichever is easier#}
-        <div class="left p3 mr1 border">Image</div>
+        <div class="left p3 mr1 border">Ribbon Here</div>
         <div class="left p2 mr1 circle"><img class="materialboxed" width="150" src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/Julia.png"></div>
         <div class="overflow-hidden">
             <p><b class="blue-font">THEN</b> you're looking to <b class="blue-font">"TRAVEL JULIA'S WAY"!</b> I meticulously craft great days for busy people who've
@@ -71,10 +66,37 @@
     {#Blue Border Line#}
     <div class="blue-border" style="height: 25px;"></div>
 </div>
+{#3 Ways to Travel Section#}
 
-
-        <section class="container"> <H5 class="blue-font">THERE ARE THREE WAYS TO "TRAVEL JULIA'S WAY":</H5>
+        <section class="container top-padding"> <H5 class="blue-font">THERE ARE THREE WAYS TO "TRAVEL JULIA'S WAY":</H5>
         </section>
+    <br>
+
+    {#Promo Table Styling#}
+    <div class="row container">
+        <div class="col s4">
+            <div class="center promo promo-example">
+                <img class="flexWidth" src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/Icon1.png" alt="Resources">
+                <p class="promo-caption">1. Use my free resources!</p>
+                <button class="btn not-rounded grey">EXPLORE TIPS & GUIDES ></button>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="center promo promo-example">
+                <img class="flexWidth" src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/Icon2.png" alt="Resources">
+                <p class="promo-caption">2. Hire me to plan your next trip</p>
+                <button class="btn not-rounded grey">REVIEW MY SERVICES ></button>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="center promo promo-example">
+                <img class="flexWidth" src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/Icon3.png" alt="Resources">
+                <p class="promo-caption">3. Travel with me!</p>
+                <button class="btn not-rounded grey">SEE UPCOMING TRIPS ></button>
+            </div>
+        </div>
+    </div>
+
 
     {#<div class="content-wrapper center container">#}
         {#<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">#}
