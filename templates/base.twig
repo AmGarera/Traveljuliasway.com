@@ -8,14 +8,14 @@
 
 	<body class="{{body_class}}" data-template="base.twig">
 
-		<header class="header">
+		<header class="header hide-on-med-and-down">
 			{% block header %}
                 <div class="row grey-background z-depth-1" style="opacity: 1; margin: 0; padding: 0; height: 150px;">
-                    <div class="col" style="margin: auto">
+                    <div class="col" style="margin: 0">
                         <img src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/logo.png" style="height: 150px; padding: 5px;">
                     </div>
 
-                    <div class="col right">
+                    <div class="col right" style="padding: 0">
                         <div class="row">
                             {% include "contact.twig" %}
                         </div>
@@ -30,6 +30,22 @@
                     </nav><!-- #nav -->
                 </div>
 			{% endblock %}
+		</header>
+
+		<header class="header hide-on-large-only grey-background">
+			<div class="row">
+				<img src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/logo.png" style="height: 100px; padding: 5px;  display: block; margin: auto;" class="hide-on-med-and-up">
+			</div>
+			<div class="row">
+				<img src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/logo.png" style="height: 100px; padding: 0px 40px" class="hide-on-small-only">
+                {% include "contact.twig" %}
+			</div>
+			<div class="row">
+                {% include "menu_mobile.twig"%}
+			</div>
+			<div class="blue-border" style="height: 10px">
+
+			</div>
 		</header>
 
 		{#<div class="carousel">#}
