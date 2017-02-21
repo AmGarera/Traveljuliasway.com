@@ -35,12 +35,13 @@
 		<header class="header hide-on-large-only grey-background">
 			<div class="row">
 				<img src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/logo.png" style="height: 100px; padding: 5px;  display: block; margin: auto;" class="hide-on-med-and-up">
+                <a class="waves-effect waves-light btn-flat hide-on-med-and-up center-align" style="width: 100%" onclick="showHideMenu()">Show Navigation</a>
 			</div>
-			<div class="row">
+			<div class="row menu" >
 				<img src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/logo.png" style="height: 100px; padding: 0px 40px" class="hide-on-small-only">
                 {% include "contact.twig" %}
 			</div>
-			<div class="row">
+			<div class="row menu">
                 {% include "menu_mobile.twig"%}
 			</div>
 			<div class="blue-border" style="height: 10px">
@@ -78,3 +79,14 @@
 		{% endblock %}
 	</body>
 </html>
+
+<script>
+
+    $(".menu").hide();
+
+    function showHideMenu() {
+//        alert("THIS IS AN ERROR")
+        $(".menu").toggle("fast");
+    }
+
+</script>
