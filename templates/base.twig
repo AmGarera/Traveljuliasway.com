@@ -34,12 +34,22 @@
 
 		<header class="header hide-on-large-only grey-background">
 			<div class="row">
+				<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 				<img src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/logo.png" style="height: 100px; padding: 5px;  display: block; margin: auto;" class="hide-on-med-and-up">
 				{#Shows collapsed menu #}
                 <a class="waves-effect waves-light btn-flat hide-on-med-and-up center-align" style="width: 100%" onclick="showHideMenu()">Show Navigation</a>
+
+				<ul id="slide-out" class="side-nav">
+					<li  class="row grey-background">
+						<img src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/logo.png" style="height: 150px; display: block; margin: auto; padding: 10px">
+					</li>
+					<li>
+                        {% include "menu_mobile.twig"%}
+					</li>
+				</ul>
 			</div>
 			<div class="row menu" >
-				<img src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/logo.png" style="height: 100px; padding: 0px 40px" class="hide-on-small-only">
+				<img src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/logo.png" style="height: 100px; padding: 0px 40px">
                 {% include "contact.twig" %}
 			</div>
 			<div class="row menu">
@@ -84,6 +94,7 @@
 <script>
 
     $(".menu").hide();
+    $(".button-collapse").sideNav();
 
     function showHideMenu() {
 //        alert("THIS IS AN ERROR")
