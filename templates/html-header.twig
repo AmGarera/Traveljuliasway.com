@@ -24,20 +24,14 @@
     <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/flexslider.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+    {#<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider-min.js"></script>#}
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script>$(document).ready(function(){
-            $('.carousel').carousel();
-            $('.slider').slider();
+//            $('.carousel').carousel();
             // Start slider
             $('.slider').slider('start');
-            $('.flexslider').flexslider({
-                animation: "slide",
-                controlNav: "thumbnails"
-            });
-            $(document).ready(function(){
-                $('.collapsible').collapsible();
-            });
+            $('.carousel.carousel-slider').carousel({fullWidth: true});
+            $('.collapsible').collapsible();
         });</script>
     {{function('wp_head')}}

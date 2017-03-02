@@ -3,41 +3,42 @@
 {% block content %}
 {#Slider#}
     <!-- Place somewhere in the <body> of your page -->
-    <div class="flexslider card-image">
-        <ul class="slides">
-            <li data-thumb="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/BEL%2B-%2BBurssels%2B-%2BGrand%2BPlace6.jpg">
-                <img class="responsive-img" src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/BEL%2B-%2BBurssels%2B-%2BGrand%2BPlace6.jpg" />
-                <p class="flex-caption">Adventurer Cheesecake Brownie</p>
-            </li>
-            <li data-thumb="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/AT%2B-%2BVienna%2Bx2%2B01.jpg">
-                <img src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/AT%2B-%2BVienna%2Bx2%2B01.jpg" />
-            </li><li data-thumb="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/BEL%2B-%2BBurssels%2B-%2BGrand%2BPlace6-resize.png">
-                <img src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/Bel-resize.png" />
-            </li>
-        </ul>
+    {#<div class="flexslider card-image">#}
+        {#<ul class="slides">#}
+            {#<li data-thumb="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/BEL%2B-%2BBurssels%2B-%2BGrand%2BPlace6.jpg">#}
+                {#<img class="responsive-img" src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/BEL%2B-%2BBurssels%2B-%2BGrand%2BPlace6.jpg" />#}
+                {#<p class="flex-caption">Adventurer Cheesecake Brownie</p>#}
+            {#</li>#}
+            {#<li data-thumb="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/AT%2B-%2BVienna%2Bx2%2B01.jpg">#}
+                {#<img src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/AT%2B-%2BVienna%2Bx2%2B01.jpg" />#}
+            {#</li><li data-thumb="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/BEL%2B-%2BBurssels%2B-%2BGrand%2BPlace6-resize.png">#}
+                {#<img src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/Bel-resize.png" />#}
+            {#</li>#}
+        {#</ul>#}
+    {#</div>#}
+
+    <div class="carousel carousel-slider center" data-indicators="true">
+        <div class="carousel-fixed-item center">
+            <a class="btn waves-effect white grey-text darken-text-2">button</a>
+        </div>
+        <div class="carousel-item red white-text" href="#one!">
+            <h2>First Panel</h2>
+            <img class="responsive-img" src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/BEL%2B-%2BBurssels%2B-%2BGrand%2BPlace6.jpg" />
+        </div>
+        <div class="carousel-item amber white-text" href="#two!">
+            <h2>Second Panel</h2>
+            <p class="white-text">This is your second panel</p>
+        </div>
+        <div class="carousel-item green white-text" href="#three!">
+            <h2>Third Panel</h2>
+            <p class="white-text">This is your third panel</p>
+        </div>
+        <div class="carousel-item blue white-text" href="#four!">
+            <h2>Fourth Panel</h2>
+            <p class="white-text">This is your fourth panel</p>
+        </div>
     </div>
 
-    {#<div class="carousel carousel-slider center" data-indicators="true">#}
-        {#<div class="carousel-fixed-item center">#}
-            {#<a class="btn waves-effect white grey-text darken-text-2">button</a>#}
-        {#</div>#}
-        {#<div class="carousel-item red white-text" href="#one!">#}
-            {#<h2>First Panel</h2>#}
-            {#<img class="responsive-img" src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/BEL%2B-%2BBurssels%2B-%2BGrand%2BPlace6.jpg" />#}
-        {#</div>#}
-        {#<div class="carousel-item amber white-text" href="#two!">#}
-            {#<h2>Second Panel</h2>#}
-            {#<p class="white-text">This is your second panel</p>#}
-        {#</div>#}
-        {#<div class="carousel-item green white-text" href="#three!">#}
-            {#<h2>Third Panel</h2>#}
-            {#<p class="white-text">This is your third panel</p>#}
-        {#</div>#}
-        {#<div class="carousel-item blue white-text" href="#four!">#}
-            {#<h2>Fourth Panel</h2>#}
-            {#<p class="white-text">This is your fourth panel</p>#}
-        {#</div>#}
-    {#</div>#}
 <div class="grey-background">
     <section class="container"> <H5 class="blue-font" >IF YOU'RE THE KIND OF TRAVELER WHO:</H5>
     <ul>
