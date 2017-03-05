@@ -8,9 +8,9 @@
 
 	<body class="{{body_class}}" data-template="base.twig">
 
-		<header class="header hide-on-med-and-down">
+		<header class="header hide-on-med-and-down" style="z-index:2">
 			{% block header %}
-                <div class="row grey-background z-depth-1" style="opacity: 1; margin: 0; padding: 0; height: 150px;">
+                <div class="row grey-background" style="opacity: 0.9; margin: 0; padding: 0; height: 150px;">
                     <div class="col" style="margin: 0">
                         <img src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/logo.png" style="height: 150px; padding: 5px;">
                     </div>
@@ -19,7 +19,7 @@
                         <div class="row">
                             {% include "contact.twig" %}
                         </div>
-                        <div class="row" style="height: 75%">
+                        <div class="row" id="bottom-row" style="height: 75%">
                             {% include "menu.twig"%}
                         </div>
                     </div>
@@ -32,7 +32,7 @@
 			{% endblock %}
 		</header>
 
-		<header class="header hide-on-large-only grey-background">
+		<header class="header hide-on-large-only grey-background" style="z-index:2">
 			<div class="row">
 				<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 				<img src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/logo.png" style="height: 100px; padding: 5px;  display: block; margin: auto;" class="hide-on-large-only">

@@ -4,6 +4,17 @@
         margin: auto;
         height: 30px;
     }
+    
+    .image-style-hover{
+        display: block;
+        height: 50px;
+        padding: none;
+    }
+    
+    .hide-marg{
+        margin: 0px;
+    }
+    
 
     .nav-text{
         font-size: 10pt;
@@ -21,7 +32,7 @@
 
 <div class="flex-container">
 
-<div class="col hoverable right flex-item">
+<div class="col right flex-item">
     <a href="" class="blue-font nav-text no-padding">
         <img class="image-style"
              src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/MeetJulia.png"
@@ -30,7 +41,7 @@
         <span class="menufont">MEET JULIA</span></a>
 </div>
 
-<div class="col hoverable right no-padding flex-item">
+<div class="col right no-padding flex-item">
     <a href="/Gallery" class="truncate blue-font nav-text">
         <img class="image-style"
              src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/Gallery.png"
@@ -39,58 +50,71 @@
         <span class="menufont">GALLERY</span></a>
 </div>
 
-<div class="col hoverable right no-padding flex-item">
-    <a href=/upcoming-trips" class="truncate blue-font nav-text">
+<div class="col right no-padding flex-item">
+    <a href="/upcoming-trips" class="truncate blue-font nav-text">
         <img class="image-style"
              src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/upcomingtrips.png"
              onmouseover="this.src='http://45.79.193.68/wp-content/themes/twig-wp-theme/static/UpcomingTrips_green.png'"
              onmouseout="this.src='http://45.79.193.68/wp-content/themes/twig-wp-theme/static/upcomingtrips.png'">
-        UPCOMING TRIPS</a>
+        <span class="menufont">UPCOMING TRIPS</span></a>
 </div>
 
-<div class="col hoverable right no-padding flex-item">
+<div class="col right no-padding flex-item">
     <a href="/services" class="truncate blue-font nav-text">
         <img class="image-style"
              src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/services.png"
              onmouseover="this.src='http://45.79.193.68/wp-content/themes/twig-wp-theme/static/Services_green.png'"
              onmouseout="this.src='http://45.79.193.68/wp-content/themes/twig-wp-theme/static/services.png'">
-        SERVICES</a>
+        <span class="menufont">SERVICES</span></a>
 </div>
 
-<div class="col hoverable right no-padding flex-item">
+<div class="col right no-padding flex-item">
     <a href="/tips-guides" class="truncate blue-font nav-text">
         <img class="image-style"
              src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/tipsandguides.png"
              onmouseover="this.src='http://45.79.193.68/wp-content/themes/twig-wp-theme/static/TipsandGuides_green.png'"
              onmouseout="this.src='http://45.79.193.68/wp-content/themes/twig-wp-theme/static/tipsandguides.png'">
-        TIPS & GUIDES</a>
+        <span class="menufont">TIPS & GUIDES</span></a>
 </div>
 
-<div class="col hoverable right no-padding flex-item">
+<div class="col right no-padding flex-item">
     <a href="/Testimonials" class="truncate blue-font nav-text">
         <img class="image-style"
              src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/Testimonials.png"
              onmouseover="this.src='http://45.79.193.68/wp-content/themes/twig-wp-theme/static/Testimonials_green.png'"
              onmouseout="this.src='http://45.79.193.68/wp-content/themes/twig-wp-theme/static/Testimonials.png'">
-        TESTIMONIALS</a>
+        <span class="menufont">TESTIMONIALS</span></a>
 </div>
 
-<div class="col hoverable right no-padding flex-item">
+<div class="col right no-padding flex-item">
     <a href="/stories-from-the-road" class="truncate blue-font nav-text">
         <img class="image-style"
              src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/StoriesfromtheRoad.png"
              onmouseover="this.src='http://45.79.193.68/wp-content/themes/twig-wp-theme/static/StoriesfromtheRoad_green.png'"
              onmouseout="this.src='http://45.79.193.68/wp-content/themes/twig-wp-theme/static/StoriesfromtheRoad.png'">
-        STORIES <span style="font-size: 8pt">FROM THE</span> ROAD</a>
+        <span class="menufont">STORIES <span style="font-size: 8pt">FROM THE</span> ROAD</span></a>
 </div>
 {#This is a proper A tag follow this#}
-<div class="col hoverable right no-padding flex-item">
+<div class="col right no-padding flex-item">
     <a href="/destinations" class="truncate blue-font nav-text">
         <img class="image-style"
              src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/destinations.png"
              onmouseover="this.src='http://45.79.193.68/wp-content/themes/twig-wp-theme/static/Destinations_green.png'"
              onmouseout="this.src='http://45.79.193.68/wp-content/themes/twig-wp-theme/static/destinations.png'">
-        DESTINATIONS</a>
+        <span class="menufont">DESTINATIONS</span></a>
 </div>
 
 </div>
+
+<script>
+    $('.image-style').hover(
+       function(){ $(this).addClass('image-style-hover') },
+       function(){ $(this).removeClass('image-style-hover') }
+)
+
+    $('#bottom-row').hover(
+       function(){ $(this).addClass('hide-marg') },
+       function(){ $(this).removeClass('hide-marg') }
+)
+
+</script>

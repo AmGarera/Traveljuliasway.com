@@ -16,14 +16,25 @@
             {#</li>#}
         {#</ul>#}
     {#</div>#}
+    
+    <style>
+        .carousel-image{
+            height: 500px;
+            overflow: hidden;
+        }
+    </style>
+    
+    <script>
+        $('.carousel.carousel-slider').carousel({fullWidth: true});
+    </script>
 
-    <div class="carousel carousel-slider center" data-indicators="true">
+    <div class="carousel carousel-slider center" data-indicators="true" style="z-index:-1; top:0; position:absolute;">
         <div class="carousel-fixed-item center">
             <a class="btn waves-effect white grey-text darken-text-2">button</a>
         </div>
         <div class="carousel-item red white-text" href="#one!">
-            <h2>First Panel</h2>
-            <img class="responsive-img" src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/BEL%2B-%2BBurssels%2B-%2BGrand%2BPlace6.jpg" />
+            {#<h2>First Panel</h2>#}
+            <img class="carousel-image" src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/BEL%2B-%2BBurssels%2B-%2BGrand%2BPlace6.jpg" />
         </div>
         <div class="carousel-item amber white-text" href="#two!">
             <h2>Second Panel</h2>
@@ -39,8 +50,8 @@
         </div>
     </div>
 
-<div class="grey-background">
-    <section class="container"> <H5 class="blue-font" >IF YOU'RE THE KIND OF TRAVELER WHO:</H5>
+<div class="grey-background" style="margin-top: 325px">
+    <section class="container"> <H5 style="padding-top: 9%;" class="blue-font" >IF YOU'RE THE KIND OF TRAVELER WHO:</H5>
     <ul>
         <li>• Wants to experience the true destination, not just the tourist traps</li>
         <li>• Wants to travel in a relaxed fashion, allowing for plenty of time to explore with all five senses</li>
