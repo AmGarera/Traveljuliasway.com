@@ -41,6 +41,8 @@ class StarterSite extends TimberSite {
 		$context['notes'] = 'These values are available everytime you call Timber::get_context();';
 		$context['menu'] = new TimberMenu();
 		$context['site'] = $this;
+		$context['gallery'] = "/wp-content/themes/twig-wp-theme/static/Gallery.png";
+		$context['slideshow'] = "/wp-content/themes/twig-wp-theme/static/Slideshow.png";
 		return $context;
 	}
 

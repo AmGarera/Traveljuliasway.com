@@ -28,6 +28,23 @@
                 NOTE:  All fees are of course subject to change and open for negotiation.</p>
         </p>
     </div>
+ <br></br>
+ {#Soruce - https://stackoverflow.com/questions/40065585/a-solution-for-grouping-items-in-loop-with-timber-and-twig #}
+<img src={{gallery}} alt="Image for "/>
 
+{# number of element for every section #}
+{% set section = 2%}
+
+<ul>
+{% for image in gallery %}
+{% if loop.index % section == 1  %}
+        <li class="slide">
+{% endif %}
+          <img src="{{image.src}}">
+{% if loop.index % section == 0 or loop.last %}
+        </li>
+{% endif %}
+{% endfor %}
+</ul>
 
 {% endblock %}
