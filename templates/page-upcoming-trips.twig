@@ -1,15 +1,18 @@
 {% extends "base.twig" %}
 
 {% block content %}
-    {% include 'quote.twig' %}
+    {% include 'page-trips.twig' %}
 
     <section class="container top-padding"><H5 class="blue-font">TRIPS</H5>
     </section>
     <br>
 
-    <div style="border-width: 4px" class="container blue-square-border border center"> This portion of the page has
-        upcoming trips
+    <div style="border-width: 4px" class="container blue-square-border border center">
+    
+        <div class="flow-text article-body">
+        {{posts.content}}
+        </div>
     </div>
-
+<br></br>
 
 {% endblock %}

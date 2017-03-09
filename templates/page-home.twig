@@ -40,14 +40,14 @@
 
     <div class="carousel carousel-slider center" data-indicators="true" style="z-index:0; top:0; position:absolute;">
         <div class="carousel-fixed-item center">
-            <a class="btn waves-effect white grey-text darken-text-2">button</a>
+            <a class="btn waves-effect white grey-text darken-text-2">Caption here</a>
         </div>
         <div class="carousel-item red white-text" href="#one!">
             <img class="carousel-image" src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/BEL%2B-%2BBurssels%2B-%2BGrand%2BPlace6.jpg" />
         </div>
         <div class="carousel-item amber white-text" href="#two!">
             <h2>Second Panel</h2>
-            <img class="carousel-image" src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/BEL%2B-%2BBurssels%2B-%2BGrand%2BPlace6.jpg" />
+            <img class="carousel-image" src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/AT+-+Vienna+x2+01.jpg" />
             <p class="white-text">This is your second panel</p>
         </div>
         <div class="carousel-item green white-text" href="#three!">
@@ -60,7 +60,7 @@
         </div>
     </div>
 
-<div class="grey-background" style="margin-top: 325px; z-index: 3; position: relative">
+<div class="grey-background hide-on-med-and-down" style="margin-top: 325px; z-index: 3; position: relative">
     <section class="container"> <H5 style="padding-top: 9%;" class="blue-font" >IF YOU'RE THE KIND OF TRAVELER WHO:</H5>
     <ul>
         <li>• Wants to experience the true destination, not just the tourist traps</li>
@@ -73,10 +73,10 @@
 
 
     </section>
-
+    <div class="hide-on-med-and-down">
     <div class="clearfix mb2" style="border-bottom: #3c4768 20px; z-index: 3; position: relative">
         {#TODO CSS Ribbon Goes here or IMG File whichever is easier#}
-        <div class="left p3 mr1 border">Ribbon Here</div>
+        <div class="left p3 mr1 border">ribbon Here</div>
         <div class="left p2 mr1 circle"><img class="materialboxed" width="150" src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/Julia.png"></div>
         <div class="overflow-hidden">
             <p><b class="blue-font">THEN</b> you're looking to <b class="blue-font">"TRAVEL JULIA'S WAY"!</b> I meticulously craft great days for busy people who've
@@ -85,9 +85,11 @@
         </div>
 
     </div>
+    </div>
     {#Blue Border Line#}
     <div class="blue-border" style="height: 25px; z-index: 3; position: relative"></div>
 </div>
+
 {#3 Ways to Travel Section#}
 
         <section class="container top-padding"> <H5 class="blue-font">THERE ARE THREE WAYS TO "TRAVEL JULIA'S WAY":</H5>
@@ -120,7 +122,7 @@
     </div>
 
     <div class="blue-border center" style="height: 25px; z-index: 3; position: relative">
-        <img class="flexWidth" src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/ribbon_newsletter.png" alt="Contact Julia">
+        <img class="flexWidth" style="transform: translate(0px, -45px);" src={{RibbonCenter}} alt="Contact Julia">
     </div>
 
 
