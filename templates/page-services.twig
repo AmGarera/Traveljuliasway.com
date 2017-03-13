@@ -33,18 +33,6 @@
 {#<img src={{gallery}} alt="Image for "/>#}
 
 {# number of element for every section #}
-{% set section = 2%}
 
-<ul>
-{% for image in gallery %}
-{% if loop.index % section == 1  %}
-        <li class="slide">
-{% endif %}
-          <img src="{{image.src}}">
-{% if loop.index % section == 0 or loop.last %}
-        </li>
-{% endif %}
-{% endfor %}
-</ul>
 
 {% endblock %}

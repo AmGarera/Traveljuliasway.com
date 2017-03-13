@@ -43,11 +43,15 @@ class StarterSite extends TimberSite {
 		$context['site'] = $this;
 		$context['gallery'] = "/wp-content/themes/twig-wp-theme/static/Gallery.png";
 		$context['slideshow'] = "/wp-content/themes/twig-wp-theme/static/Slideshow.png";
-		$context['RibbonCenter'] = "/wp-content/themes/twig-wp-theme/static/Ribbon2.png";
-		$context['RibbonSide'] = "/wp-content/themes/twig-wp-theme/static/Ribbon1.png";
+		$context['RibbonCenter'] = "/wp-content/themes/twig-wp-theme/static/JuliaContact.png";
+		$context['RibbonSide'] = "/wp-content/themes/twig-wp-theme/static/Julia_greenbanner.png";
 		$context['posts'] = new TimberPost(28); // It's a new TimberPost object, but an existing post from WordPress.
 		$context['lls'] = "/wp-content/themes/twig-wp-theme/static/LongLiveSimple.png";
 		$context['countryBanner'] = "/wp-content/themes/twig-wp-theme/static/ExplorebyCountry_ribbon.png";
+		$context['heroRibbon'] = "/wp-content/themes/twig-wp-theme/static/Hero_ribbon.png";
+		// Home Page Gallery
+		$context['home1'] = "/wp-content/themes/twig-wp-theme/static/BEL%2B-%2BBurssels%2B-%2BGrand%2BPlace6.jpg";
+		$context['home2'] = "/wp-content/themes/twig-wp-theme/static/AT+-+Vienna+x2+01.jpg";
 		return $context;
 	}
 
