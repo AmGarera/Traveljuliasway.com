@@ -46,6 +46,8 @@ class StarterSite extends TimberSite {
 		$context['RibbonCenter'] = "/wp-content/themes/twig-wp-theme/static/Ribbon2.png";
 		$context['RibbonSide'] = "/wp-content/themes/twig-wp-theme/static/Ribbon1.png";
 		$context['posts'] = new TimberPost(28); // It's a new TimberPost object, but an existing post from WordPress.
+		$context['lls'] = "/wp-content/themes/twig-wp-theme/static/LongLiveSimple.png";
+		$context['countryBanner'] = "/wp-content/themes/twig-wp-theme/static/ExplorebyCountry_ribbon.png";
 		return $context;
 	}
 

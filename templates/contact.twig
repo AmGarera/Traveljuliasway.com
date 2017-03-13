@@ -8,9 +8,17 @@
         padding: 2px;
     }
 
-    input {
-        display: block;
-        padding: 2px;
+    .special-input {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        padding: 2px !important;
+        background: #3c4768 !important;
+        margin-bottom: 0px !important;
+        width: inherit !important;
+        height: inherit !important;
+        border-bottom: 0 !important;
+        border-radius: 5px !important;
+        padding: 4px !important;
     }
 </style>
 
@@ -18,11 +26,16 @@
 <div class="col right white-text valign-wrapper" style="background-image: url('http://45.79.193.68/wp-content/themes/twig-wp-theme/static/ribbon_newsletter.png'); background-size: 100% 100%;">
     <ul style="padding: 0px 15px 0px 45px;">
         <li>
-            <a class="valign white-text">OPT IN TO NEWSLETTER</a>
+            <div class="valign white-text">
+                <span style="font-size: 13pt">Get the Latest </span>
+                <input type="text" name="fname" placeholder="First Name" class="special-input grey-font">
+                <input type="text" name="email" placeholder="Email" class="special-input">
+            </div>
         </li>
-        <li><a class="hoverable valign">Facebook</a></li>
-        <li><a class="hoverable valign">Instagram</a></li>
-        <li><a class="hoverable valign">Twitter</a></li>
-        <li><a class="hoverable valign">Youtube</a></li>
+        <li class="valign white-text" style="font-size: 13pt">Subscribe</li>
+        <li><a class="valign">Facebook</a></li>
+        <li><a class="valign">Instagram</a></li>
+        <li><a class="valign">Twitter</a></li>
+        <li><a class="valign">Youtube</a></li>
     </ul>
 </div>
