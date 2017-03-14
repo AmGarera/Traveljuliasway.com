@@ -19,7 +19,7 @@
     
     <style>
         .carousel-image{
-            height: 600px;
+            height: auto;
            background-position: center center;
             background-repeat: no-repeat;
             overflow: hidden;
@@ -35,31 +35,76 @@
          
     </script>
 
+<div class="slider-for carousel-image">
+      <div><img class="responsive-img" src={{home1}} /></div>
+      <div><img class="responsive-img" src={{home2}} /></div>
+      
+      <div><img class="responsive-img" src={{home3}} /></div>
+      <div><img class="responsive-img" src={{home4}} /></div>
+</div>
+      
 
-
-    <div class="carousel carousel-slider center" style="z-index:0; top:0; position:absolute;">
-        <div class="carousel-fixed-item center">
+    {#<div class="carousel carousel-slider center" style="z-index:0; top:0; position:absolute;">#}
+    {#    <div class="carousel-fixed-item center">#}
             
-        </div>
-        <div class="carousel-item red white-text" href="#one!">
-            <img class="carousel-image" src={{home1}} />
+    {#    </div>#}
+    {#    <div class="carousel-item red white-text" href="#one!">#}
+    {#        <img class="carousel-image" src={{home1}} />#}
         
-        </div>
-        <div class="carousel-item amber white-text" href="#two!">
-            <img class="carousel-image" src={{home2}}/>
-        </div>
-        <div class="carousel-item green white-text" href="#three!">
-            <h2>Third Panel</h2>
-            <p class="white-text">This is your third panel</p>
-        </div>
-        <div class="carousel-item blue white-text" href="#four!">
-            <h2>Fourth Panel</h2>
-            <p class="white-text">This is your fourth panel</p>
-        </div>
+    {#    </div>#}
+    {#    <div class="carousel-item amber white-text" href="#two!">#}
+    {#        <img class="carousel-image" src={{home2}}/>#}
+    {#    </div>#}
+    {#    <div class="carousel-item green white-text" href="#three!">#}
+    {#        <h2>Third Panel</h2>#}
+    {#        <p class="white-text">This is your third panel</p>#}
+    {#    </div>#}
+    {#    <div class="carousel-item blue white-text" href="#four!">#}
+    {#        <h2>Fourth Panel</h2>#}
+    {#        <p class="white-text">This is your fourth panel</p>#}
+    {#    </div>#}
+    {#</div>#}
+    <br></br>
+    <div class="">
+    <div style=" z-index: 3; position: relative" class="slider-nav row">
+    <img class="col s12 m6 l3" src={{home1}} />
+      <img class="col s12 m6 l3" src={{home2}} />
+      <img class="col s12 m6 l3" src={{home3}} />
+      <img class="col s12 m6 l3" src={{home4}} />
+      
+</div>
     </div>
 
-<div class="grey-background hide-on-med-and-down" style="margin-top: 325px; z-index: 3; position: relative">
+<div class="grey-background hide-on-med-and-down" style=" z-index: 3; position: relative">
     <section class="container"> <H5 style="padding-top: 9%;" class="blue-font menufont" >IF YOU'RE THE KIND OF TRAVELER WHO:</H5>
+    <ul>
+        <li>• Wants to experience the true destination, not just the tourist traps</li>
+        <li>• Wants to travel in a relaxed fashion, allowing for plenty of time to explore with all five senses</li>
+        <li>• Doesn't want to do what "everyone else does", yet still wants to understand why the famous things are important</li>
+        <li>• Want to discover the "je ne sasis quoi" of a place - that special something that makes it unique and special</li>
+
+
+    </ul>
+<br></br>
+
+    </section>
+    <br></br>
+    <div class="hide-on-med-and-down">
+    <div class="clearfix mb2" style="border-bottom: #3c4768 20px; z-index: 3; position: relative">
+        
+        <div class="left p3 mr1"><img src={{RibbonSide |  resize(400)}}></img></div>
+        <div class="left p2 mr1 circle"><img class="materialboxed" width="150" src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/Julia.png"></div>
+        <div class="overflow-hidden">
+            <br></br>
+            <p><b class="blue-font menufont larger-paragraph-font">THEN</b> you're looking to <b class="blue-font menufont larger-paragraph-font">"TRAVEL JULIA'S WAY"!</b> I meticulously craft great days for busy people who've
+                graduated from DIY backpacker style traveling, but who still want to experience real culture so that they understand
+                and experience that people are people no matter where they are in the world</p>
+        </div>
+
+    </div>
+    </div>
+    
+    <section class="container hide-on-med-and-up"> <H5 style="padding-top: 9%;" class="blue-font menufont" >IF YOU'RE THE KIND OF TRAVELER WHO:</H5>
     <ul>
         <li>• Wants to experience the true destination, not just the tourist traps</li>
         <li>• Wants to travel in a relaxed fashion, allowing for plenty of time to explore with all five senses</li>
@@ -71,19 +116,6 @@
 
 
     </section>
-    <div class="hide-on-med-and-down">
-    <div class="clearfix mb2" style="border-bottom: #3c4768 20px; z-index: 3; position: relative">
-        {#TODO CSS Ribbon Goes here or IMG File whichever is easier#}
-        <div class="left p3 mr1"><img src={{RibbonSide |  resize(400)}}></img></div>
-        <div class="left p2 mr1 circle"><img class="materialboxed" width="150" src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/Julia.png"></div>
-        <div class="overflow-hidden">
-            <p><b class="blue-font menufont larger-paragraph-font">THEN</b> you're looking to <b class="blue-font menufont larger-paragraph-font">"TRAVEL JULIA'S WAY"!</b> I meticulously craft great days for busy people who've
-                graduated from DIY backpacker style traveling, but who still want to experience real culture so that they understand
-                and experience that people are people no matter where they are in the world</p>
-        </div>
-
-    </div>
-    </div>
     {#Blue Border Line#}
     <div class="blue-border" style="height: 25px; z-index: 3; position: relative"></div>
 </div>

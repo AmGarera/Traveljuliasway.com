@@ -105,44 +105,24 @@
 
 
  <style>
-        .carousel-image{
-            height: 500px;
-           background-position: center center;
-            background-repeat: no-repeat;
-            overflow: hidden;
-        }
+        /*.carousel-image{*/
+        /*    height: 500px;*/
+        /*   background-position: center center;*/
+        /*    background-repeat: no-repeat;*/
+        /*    overflow: hidden;*/
+        /*}*/
     </style>
     
     <script>
          
     </script>
 
-<div class="row">
-
-    <div class="carousel carousel-slider center" style="z-index:0; top:0; position:absolute;">
-        <div class="carousel-fixed-item center">
-            
-        </div>
-        <div class="carousel-item red white-text" href="#one!">
-            <img class="carousel-image" src="/wp-content/themes/twig-wp-theme/static/BEL%2B-%2BBurssels%2B-%2BGrand%2BPlace6.jpg" />
-        
-        </div>
-        <div class="carousel-item amber white-text" href="#two!">
-            <img class="carousel-image" src="/wp-content/themes/twig-wp-theme/static/AT+-+Vienna+x2+01.jpg" />
-        </div>
-        <div class="carousel-item green white-text" href="#three!">
-            <h2>Third Panel</h2>
-            <p class="white-text">This is your third panel</p>
-        </div>
-        <div class="carousel-item blue white-text" href="#four!">
-            <h2>Fourth Panel</h2>
-            <p class="white-text">This is your fourth panel</p>
-        </div>
-    </div>
+<div class="slider-for carousel-image">
+      <div><img class="responsive-img" src={{destinations}} /></div>
 </div>
 
 <!-- HTML -->
-<div style="margin-top: 325px; z-index: 3; position: relative" class="">
+<div style="z-index: 3; position: relative" class="">
     
     
     
@@ -183,6 +163,22 @@
                     <a href="#!" class="collection-item" onmouseover=""><i class="material-icons">place</i>Dominican Republic</a>
                 </div>
             </li>
+            
+            <li class="z-depth-0">
+                <div class="collapsible-header menufont" onClick="AddBorder">Europe</div>
+                <div class="collapsible-body">
+                    <div class="collection">
+                        <a href="#!" class="collection-item" onmouseover=""><i class="material-icons">place</i>France</a>
+                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Englad</a>
+                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Italy</a>
+                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Spain</a>
+                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Germany</a>
+                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Austria</a>
+                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Czech Republic</a>
+                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Hungary</a>
+                    </div>
+                </div>
+            </li>
 
             <li class="z-depth-0" >
                 <div class="collapsible-header menufont">Oceania</div>
@@ -201,4 +197,5 @@
     <div id="mapdiv" style="width: 70%; height: 400px;" class="col s9"></div>
 </div>
     </div>
+    <br></br>
 {% endblock %}
