@@ -50,6 +50,7 @@ class StarterSite extends TimberSite {
 		$context['countryBanner'] = "/wp-content/themes/twig-wp-theme/static/ExplorebyCountry_ribbon.png";
 		$context['heroRibbon'] = "/wp-content/themes/twig-wp-theme/static/Hero_ribbon.png";
 		$context['Gifted'] = "/wp-content/themes/twig-wp-theme/static/GIFTED_Logo_Horiz_Member377x116.fw.png";
+		$context['affluent'] = "/wp-content/themes/twig-wp-theme/static/AffluentTravelerCollection-logo.png";
 		$context['storyposts'] = Timber::get_posts();
 		$context['sig'] = "/wp-content/themes/twig-wp-theme/static/Juliasignature.png";
 		// Social Media Icons
@@ -62,11 +63,13 @@ class StarterSite extends TimberSite {
 		$context['home2'] = "/wp-content/themes/twig-wp-theme/static/2_PlitviceLakesNationalParkCroatia.png";
 		$context['home3'] = "/wp-content/themes/twig-wp-theme/static/3_BoraBora.png";
 		$context['home4'] = "/wp-content/themes/twig-wp-theme/static/4_Ecuador.png";
+		$context['home5'] = "/wp-content/themes/twig-wp-theme/static/5_CassisFrance.png";
+		$context['home6'] = "/wp-content/themes/twig-wp-theme/static/6_PenangMalaysia.png";
 		// Page Hero's
-		$context['destinations'] = "/wp-content/themes/twig-wp-theme/static/destinations.png";
+		// $context['destinations'] = "/wp-content/themes/twig-wp-theme/static/destinations.png";
 		
 		
-		// Destinations
+		// Other page heros
 		$context['destinations'] = "/wp-content/themes/twig-wp-theme/static/Destinations.png";
 		$context['gallery'] = "/wp-content/themes/twig-wp-theme/static/Gallery_hero.png";
 		$context['stories'] = "/wp-content/themes/twig-wp-theme/static/StoriesfromtheRoad_hero.png";

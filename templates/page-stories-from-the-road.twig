@@ -14,22 +14,21 @@
 <div class="slider-for carousel-image">
       <div><img class="responsive-img" src={{stories}} /></div>
 </div>
-    <div class="grey-background">
-        <div class="container">Putting the right text here I promise</div>
-    
-    </div>
+    {% include "quote.twig" %}
 
-    <section class="container top-padding"><H3 class="blue-font">Stories From The Road</H5>
-    </section>
+    
     <br>
 
-    <div style="border-width: 4px" class="container blue-square-border border center">
-        {% for post in storyposts %}
-		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-	{% endfor %}
+    <div style="padding: 3% ; border-width: 4px" class="blue-square-border border center article">
+                    
+                    <div class="center-align">{{post.content(1)}}</div>
+                </div> 
+ {#       {% for post in storyposts %}#}
+	{#	{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}#}
+	{#{% endfor %}#}
         {# This portion of the page has#}
         {#lots of blog posts.#}
-    </div>
+    
 
 <br></br>
 {% endblock %}

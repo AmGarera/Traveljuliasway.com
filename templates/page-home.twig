@@ -28,7 +28,10 @@
         .larger-paragraph-font {
             font-size: larger;
         }
-        
+        body {
+            background-color: #3c4768
+            
+        }
     </style>
     
     <script>
@@ -38,9 +41,10 @@
 <div class="slider-for carousel-image">
       <div><img class="responsive-img" src={{home1}} /></div>
       <div><img class="responsive-img" src={{home2}} /></div>
-      
       <div><img class="responsive-img" src={{home3}} /></div>
       <div><img class="responsive-img" src={{home4}} /></div>
+      <div><img class="responsive-img" src={{home5}} /></div>
+      <div><img class="responsive-img" src={{home6}} /></div>
 </div>
       
 
@@ -65,12 +69,14 @@
     {#    </div>#}
     {#</div>#}
     <br></br>
-    <div class="">
-    <div style=" z-index: 3; position: relative" class="slider-nav row">
-    <img class="col s12 m6 l3" src={{home1}} />
-      <img class="col s12 m6 l3" src={{home2}} />
-      <img class="col s12 m6 l3" src={{home3}} />
-      <img class="col s12 m6 l3" src={{home4}} />
+    <div style=""class="">
+    <div style=" z-index: 3; position: relative;" class="slider-nav row">
+    <img class="col s12 m6 l2" src={{home1}} />
+      <img class="col s12 m6 l2" src={{home2}} />
+      <img class="col s12 m6 l2" src={{home3}} />
+      <img class="col s12 m6 l2" src={{home4}} />
+      <img class="col s12 m6 l2" src={{home5}} />
+      <img class="col s12 m6 l2" src={{home6}} />
       
 </div>
     </div>
@@ -85,7 +91,7 @@
 
 
     </ul>
-<br></br>
+<br></br><br></br>
 
     </section>
     <br></br>
@@ -122,12 +128,13 @@
 
 {#3 Ways to Travel Section#}
 
-        <section class="container top-padding"> <H5 class="blue-font">THERE ARE THREE WAYS TO "TRAVEL JULIA'S WAY":</H5>
-        </section>
+<div style="padding-bottom: 9%; background: white">
+    <section class="container top-padding"> <H5 class="blue-font">THERE ARE THREE WAYS TO "TRAVEL JULIA'S WAY":</H5>
+    </section>
     <br>
 
     {#Promo Table Styling#}
-    <div style="padding-bottom: 9%" class="row container">
+    <div class="row container">
         <div class="col s12 l4">
             <div class="center promo promo-example">
                 <img class="flexWidth" src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/Icon1.png" alt="Resources">
@@ -150,6 +157,7 @@
             </div>
         </div>
     </div>
+</div>
 
     {#<div class="blue-border center" style="height: 25px; z-index: 3; position: relative">#}
     {#    <img class="flexWidth" style="transform: translate(0px, -45px);" src={{RibbonCenter}} alt="Contact Julia">#}
