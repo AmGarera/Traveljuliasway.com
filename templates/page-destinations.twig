@@ -37,12 +37,20 @@
         "dataProvider": {
             "map": "worldLow",
             "areas": [
-                { "id": "AU" },
-                { "id": "US" },
-                { "id": "FR" },
-                { "id": "NZ" },
-                { "id": "PYF" },
-                { "id": "HRV" },
+                { "id": "AU",
+                "modalUrl": "/tag/au/",
+                 "selectable": true},
+                { "id": "US",
+                "modalUrl": "/tag/us/",
+                 "selectable": true},
+                { "id": "FR",
+                "modalUrl": "/tag/fr/",
+                  "selectable": true },
+                { "id": "NZ",
+                "modalUrl": "/tag/nz/",
+      "selectable": true },
+                { "id": "PY" },
+                { "id": "HR" },
                 { "id": "CA" },
                 { "id": "MX" },
                 { "id": "ES" },
@@ -128,7 +136,12 @@ map.addListener("rollOutMapObject", function(event) {
 
 map.addListener("clickMapObject", function(event) {
     // alert("https://twig-twj-amgmetallica.c9users.io/tag/" + event.mapObject.id.toLowerCase());
-    $("#contentMapNonVulgar").show(1);
+    // $("#contentMapNonVulgar").show(1);
+    $.fancybox({
+    href: event.mapObject.modalUrl,
+    title: event.mapObject.title,
+    type: "iframe"
+  });
 });
     
 </script>
