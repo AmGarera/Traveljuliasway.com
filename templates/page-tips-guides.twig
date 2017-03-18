@@ -11,9 +11,19 @@
     </div>
 </div>
 <div class="container row">
+<!-- Dropdown Trigger -->
+  <a class='dropdown-button btn' href='#' data-activates='dropdown1'>City Overviews</a>
 
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content'>
+    <li><a href="#!">one</a></li>
+    <li><a href="#!">two</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">three</a></li>
+  </ul>
 <ul class="collection">
 
+ 
 <li class="collection-item">City Overviews</li>
 
 <li class="collection-item">       Destination Spotlights</li>
@@ -26,6 +36,7 @@
 
 <li class="collection-item">       Reviews – Tours / Hotels</li>
 </ul>
+{{post.content}}
 </div>
     
 {% endblock %}

@@ -20,12 +20,12 @@
     <script src="https://www.amcharts.com/lib/3/plugins/responsive/responsive.min.js"></script>
     <!-- Chart code -->
 <script>
-    AmCharts.makeChart( "mapdiv", {
+    var map = AmCharts.makeChart( "mapdiv", {
         /**
          * this tells amCharts it's a map
          */
         "type": "map",
-
+        
         /**
          * create data provider object
          * map property is usually the same as the name of the map file.
@@ -78,10 +78,15 @@
                 { "id": "JM" },
                 { "id": "DO" },
                 { "id": "SG" },
-                { "id": "ID" }
+                { "id": "ID" },
+                
 
             ]
         },
+        
+         "objectList": {
+            "container": "listdiv"
+          },
 
         /**
          * create areas settings
@@ -105,7 +110,26 @@
 </script>
 <script>
     
-    
+var currentItem;
+
+map.addListener("rollOverMapObject", function(event) {
+  var list = document.getElementById('listdiv').getElementsByTagName('a');
+  for (var key in list) {
+    if (list[key].innerText == event.mapObject.title) {
+      list[key].className = 'selected';
+      currentItem = list[key];
+    }
+  }
+});
+
+map.addListener("rollOutMapObject", function(event) {
+  currentItem.className = '';
+});
+
+map.addListener("clickMapObject", function(event) {
+    // alert("https://twig-twj-amgmetallica.c9users.io/tag/" + event.mapObject.id.toLowerCase());
+    $("#contentMapNonVulgar").show(1);
+});
     
 </script>
  <style>
@@ -115,12 +139,29 @@
         /*    background-repeat: no-repeat;*/
         /*    overflow: hidden;*/
         /*}*/
+        
+        #listdiv li a {
+          padding: 3px 10px;
+          display: block;
+          cursor: pointer;
+          font-size: 15pt;
+        }
+        
+        #listdiv li  {
+          width: 100%;
+        }
+
+        #listdiv li a:hover {
+            color: white;
+            background: #3c4768;
+            
+        }
     </style>
     {#USe this to do the links https://www.amcharts.com/kbase/displaying-information-clicked-map-object-outside-map/#}
     {#This too https://www.amcharts.com/kbase/ajax-loading-content-description-box-click-map-object/#}
     {#https://www.amcharts.com/kbase/open-custom-urls-fancybox-modal-country-click/#}
-    {#https://www.amcharts.com/kbase/two-way-syncing-hovers-map-areas-object-list/#}
-    {#https://www.amcharts.com/kbase/map-zoom-first-click-marker-go-specific-url-next-click/#}
+    {#We want this one so when the user clicks on the country in the sidebar it zooms in on the country https://www.amcharts.com/kbase/two-way-syncing-hovers-map-areas-object-list/#}
+    {# This one is so then it opens up the page of posts taged whatever country it is https://www.amcharts.com/kbase/map-zoom-first-click-marker-go-specific-url-next-click/#}
     <script>
          
     </script>
@@ -138,98 +179,16 @@
     <br></br>
     <img src={{countryBanner | resize(400)}}></img>
 <div class="row">
-    <div class="col s3 hide-on-med-and-down">
-        <ul class="collapsible popout " data-collapsible="expandable">
-            <li class="z-depth-0">
-                <div class="collapsible-header menufont">North America</div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        <a class="collection-item" onClick="displayOnMap("US")"><i class="material-icons">place</i>United States</a>
-                        <a href="#!" class="collection-item" ><i class="material-icons">place</i>Canada</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Mexico</a>
-                        
-                    </div>
-                </div>
-            </li>
-            <li class="z-depth-0">
-                <div class="collapsible-header menufont" onClick="AddBorder">South America</div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        <a href="#!" class="collection-item" onmouseover=""><i class="material-icons">place</i>United States</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Canada</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Mexico</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Dominican Republic</a>
-                    </div>
-                </div>
-            </li>
-            <li class="z-depth-0">
-                <div class="collapsible-header menufont">Central America</div>
-                <div class="collapsible-body">
-                    <a href="#!" class="collection-item" onmouseover=""><i class="material-icons">place</i>Coasta Rica</a>
-                    <a href="#!" class="collection-item" onmouseover=""><i class="material-icons">place</i>St. Barth's</a>
-                    <a href="#!" class="collection-item" onmouseover=""><i class="material-icons">place</i>Jamaica</a>
-                    <a href="#!" class="collection-item" onmouseover=""><i class="material-icons">place</i>Dominican Republic</a>
-                </div>
-            </li>
-            
-            <li class="z-depth-0">
-                <div class="collapsible-header menufont" onClick="AddBorder">Europe</div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        <a href="#!" class="collection-item" onmouseover=""><i class="material-icons">place</i>France</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Englad</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Italy</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Spain</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Germany</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Austria</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Czech Republic</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Hungary</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Greece</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Switzerland</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>The Netherlands</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Belgium</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Scotland</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Malta</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Luxembourg</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Vatican City</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Monaco</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Croatia</a>
-                    </div>
-                </div>
-            </li>
-            
-            <li class="z-depth-0">
-                <div class="collapsible-header menufont" onClick="AddBorder">Asia</div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        <a href="#!" class="collection-item" onmouseover=""><i class="material-icons">place</i>France</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Englad</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Italy</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Spain</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Germany</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Austria</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Czech Republic</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Hungary</a>
-                    </div>
-                </div>
-            </li>
-
-            <li class="z-depth-0" >
-                <div class="collapsible-header menufont">Oceania</div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        <a href="#!" class="collection-item" onmouseover=""><i class="material-icons">place</i>New Zealand</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Australia</a>
-                        <a href="#!" class="collection-item"><i class="material-icons">place</i>Tahiti</a>
-                    </div>
-                </div>
-            </li>
-        </ul>
-
-
+    
+    <div class="col s3" id="listdiv" style="height: 400px; overflow:hidden; overflow-y:scroll;">
+       
     </div>
+    
     <div id="mapdiv" style="width: 70%; height: 400px;" class="col s9"></div>
 </div>
+
+    <div id="contentMapNonVulgar" style="padding: 3% ; border-width: 4px; margin-bottom: 50px;" class="container blue-square-border border sanchez">
+        {#{{storyposts}}#}
     </div>
-    <br></br>
+</div>
 {% endblock %}

@@ -65,19 +65,29 @@ class StarterSite extends TimberSite {
 		$context['home4'] = "/wp-content/themes/twig-wp-theme/static/4_Ecuador.png";
 		$context['home5'] = "/wp-content/themes/twig-wp-theme/static/5_CassisFrance.png";
 		$context['home6'] = "/wp-content/themes/twig-wp-theme/static/6_PenangMalaysia.png";
+		
+		// Home Thumbnails
+		$context['home7'] = "/wp-content/themes/twig-wp-theme/static/1_VeniceItaly_small.png";
+		$context['home8'] = "/wp-content/themes/twig-wp-theme/static/2_PlitviceLakesNationalParkCroatia_small.png";
+		$context['home9'] = "/wp-content/themes/twig-wp-theme/static/3_BoraBora_small.png";
+		$context['home10'] = "/wp-content/themes/twig-wp-theme/static/4_Ecuador_small.png";
+		$context['home11'] = "/wp-content/themes/twig-wp-theme/static/5_CassisFrance_small.png";
+		$context['home12'] = "/wp-content/themes/twig-wp-theme/static/6_PenangMalaysia_small.png";
 		// Page Hero's
 		// $context['destinations'] = "/wp-content/themes/twig-wp-theme/static/destinations.png";
 		
 		
 		// Other page heros
-		$context['destinations'] = "/wp-content/themes/twig-wp-theme/static/Destinations.png";
+		$context['destinations'] = "/wp-content/themes/twig-wp-theme/static/Destinations_hero.png";
 		$context['gallery'] = "/wp-content/themes/twig-wp-theme/static/Gallery_hero.png";
 		$context['stories'] = "/wp-content/themes/twig-wp-theme/static/StoriesfromtheRoad_hero.png";
 		$context['testimonial'] = "/wp-content/themes/twig-wp-theme/static/Testimonials_hero.png";
-		$context['tipsguide'] = "/wp-content/themes/twig-wp-theme/static/Tips-Guides_hero.png";
+		$context['tipsguide'] = "/wp-content/themes/twig-wp-theme/static/Tips&Guides_hero.png";
 		$context['services'] = "/wp-content/themes/twig-wp-theme/static/Services_hero.png";
 		$context['upcomingtrips'] = "/wp-content/themes/twig-wp-theme/static/UpcomingEvents_hero.png";
 		$context['meetjulia'] = "/wp-content/themes/twig-wp-theme/static/MeetJulia_hero.png";
+		
+		$context['country'] = new TimberTerm('France');
 		return $context;
 	}
 
