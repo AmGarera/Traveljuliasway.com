@@ -1,0 +1,35 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<style>
+    .carousel-image{
+            height: auto;
+           background-position: center center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            
+        }
+</style>
+<div class="slider-for carousel-image">
+      <div><img class="responsive-img" src={{stories}} /></div>
+</div>
+    {% include "quote.twig" %}
+
+    
+    <br>
+
+
+    <div style="padding: 3% ; border-width: 4px" class="blue-square-border border center article">
+
+        <div class="center-align sanchez">{{ post.content(1) }}</div>
+                </div> 
+ {#       {% for post in storyposts %}#}
+	{#	{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}#}
+	{#{% endfor %}#}
+        {# This portion of the page has#}
+        {#lots of blog posts.#}
+    
+
+<br></br>
+{% endblock %}
