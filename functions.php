@@ -1,5 +1,9 @@
 <?php
 
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
+
 if ( ! class_exists( 'Timber' ) ) {
 	add_action( 'admin_notices', function() {
 		echo '<div class="error"><p>Timber not activated. Make sure you activate the plugin in <a href="' . esc_url( admin_url( 'plugins.php#timber' ) ) . '">' . esc_url( admin_url( 'plugins.php') ) . '</a></p></div>';
@@ -59,7 +63,7 @@ class StarterSite extends TimberSite {
 		$context['twitter'] = "/wp-content/themes/twig-wp-theme/static/TwitterIcon.png";
 		$context['youtube'] = "/wp-content/themes/twig-wp-theme/static/YouTubeIcon.png";
 		// Home Page Gallery
-		$context['home1'] = "/wp-content/themes/twig-wp-theme/static/home1.png";
+		$context['home1'] = "/wp-content/themes/twig-wp-theme/static/1_VeniceItaly.png";
 		$context['home2'] = "/wp-content/themes/twig-wp-theme/static/2_PlitviceLakesNationalParkCroatia.png";
 		$context['home3'] = "/wp-content/themes/twig-wp-theme/static/3_BoraBora.png";
 		$context['home4'] = "/wp-content/themes/twig-wp-theme/static/4_Ecuador.png";

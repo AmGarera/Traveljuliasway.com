@@ -26,17 +26,17 @@
     }
 </style>
 
-
 <div class="col right white-text valign-wrapper" style="background-image: url('http://45.79.193.68/wp-content/themes/twig-wp-theme/static/ribbon_newsletter.png'); background-size: 100% 120%;">
     <ul style="padding: 0px 15px 0px 45px; margin: 5px 0px 5px 0px">
         <li style="margin: 5px 0px;">
-            <div>
+            <form id="ic_signupform" method="POST" action="https://app.icontact.com/icp/core/mycontacts/signup/designer/form/?id=95&cid=1560023&lid=21059">
                 <span style="font-size: 13pt; color: white;"><b>Get the Latest: </b></span>
-                <input type="text" name="fname" placeholder="First Name" class="special-input grey-font">
-                <input type="text" name="email" placeholder="Email" class="special-input">
-            </div>
+                <input type="text" name="data[fname]" placeholder="First Name" class="special-input grey-font">
+                <input type="text" name="data[email]" placeholder="Email" class="special-input">
+                <span class="white-text button" style="font-size: 13pt;" type="submit">Subscribe </span>
+                <img src="//app.icontact.com/icp/core/signup/tracking.gif?id=null&cid=1560023&lid=21059"/>
+            </form>
         </li>
-        <li class="valign white-text" style="font-size: 13pt; padding: 0px 20px 0px 0px; margin: 5px 0px;"> <span class="sub">Subscribe </span></li>
         <li><a  href="https://www.facebook.com/traveljuliasway" class="valign"><img src={{facebook}} style="height: 30px; padding: 0"></img></a></li>
         <li><a  href="https://www.instagram.com/traveljuliasway" class=" valign"><img src={{instagram}} style="height: 30px"></img></a></li>
         <li><a  href="https://twitter.com/traveljuliasway" class="valign"><img src={{twitter}} style="height: 30px"></img></a></li>

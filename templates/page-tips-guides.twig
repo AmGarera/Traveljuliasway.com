@@ -5,38 +5,32 @@
 <div class="slider-for carousel-image">
       <div><img class="responsive-img" src={{tipsguide}} /></div>
 </div>
-<div class="grey-background">
-    <div class="container">
+<div class="grey-background quote-padding">
+    <div class="sanchez">
     <div>Browse through the different sections for city overviews, practical tips, reviews, and of course travel inspiration.  My regular readers get this kind of information weekly, so remember to subscribe above to get your regular fix!</div>
+    <div><img src={{sig | resize(100)}}></img></div>
     </div>
 </div>
 <div class="container row">
 <!-- Dropdown Trigger -->
-  <a class='dropdown-button btn' href='#' data-activates='dropdown1'>City Overviews</a>
-
-  <!-- Dropdown Structure -->
-  <ul id='dropdown1' class='dropdown-content'>
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">three</a></li>
-  </ul>
-<ul class="collection">
-
- 
-<li class="collection-item">City Overviews</li>
-
-<li class="collection-item">       Destination Spotlights</li>
-
-<li class="collection-item">       Logistical Tips</li>
-
-<li class="collection-item">       Partner Highlights</li>
-
-<li class="collection-item">       Travel Ideas</li>
-
-<li class="collection-item">       Reviews – Tours / Hotels</li>
-</ul>
+  <h5>City Overviews</h5>
 {{post.content}}
+<br></br>
+<h5>Destination Spotlights</h5>
+{{post.content}}
+<br></br>
+<h5>Logistical Tips</h5>
+{{post.content}}
+<br></br>
+<h5>Partner Highlights</h5>
+{{post.content}}
+<br></br>
+<h5>Travel Ideas</h5>
+{{post.content}}
+<br></br>
+<h5>Reviews – Tours / Hotels</h5>
+{{post.content}}
+<br></br>
 </div>
     
 {% endblock %}

@@ -17,7 +17,7 @@
     
 
     .nav-text{
-        font-size: 10pt;
+        font-size: 9pt;
     }
 
     .no-padding{
@@ -30,16 +30,27 @@
 
     .sanchez {
         font-family: 'Sanchez', sans-serif;
+        color: #848787;
     }
     
     .right{
         padding: 0.3% !important;
     }
+    
+    .flex-container {
+  flex-direction: column-reverse;
+}
 
 </style>
 
+<script type="text/javascript" src="//app.icontact.com/icp/static/form/javascripts/validation.js"></script>
+
+<script type="text/javascript" src="//app.icontact.com/icp/static/form/javascripts/tracking.js"></script>
+
+
+<div class="">
 <div class="col right">
-    <a href="/meet-julia" class="blue-font nav-text">
+    <a href="/meet-julia" class="truncate blue-font nav-text">
         <img class="image-style"
              src="/wp-content/themes/twig-wp-theme/static/MeetJulia.png"
              onmouseover="this.src='/wp-content/themes/twig-wp-theme/static/MeetJulia_green.png'"
@@ -109,8 +120,7 @@
              onmouseout="this.src='/wp-content/themes/twig-wp-theme/static/destinations.png'">
         <span class="menufont">DESTINATIONS</span></a>
 </div>
-
-
+</div>
 <script>
     $('.image-style').hover(
        function(){ $(this).addClass('image-style-hover') },

@@ -23,6 +23,7 @@
            background-position: center center;
             background-repeat: no-repeat;
             overflow: hidden;
+            width: 100%;
         }
         
         .larger-paragraph-font {
@@ -38,7 +39,7 @@
          
     </script>
 
-<div class="slider-for carousel-image">
+<div class="slider-for carousel-image" style: "width: 100%">
       <div><img class="responsive-img" src={{home1}} /></div>
       <div><img class="responsive-img" src={{home2}} /></div>
       <div><img class="responsive-img" src={{home3}} /></div>
@@ -81,7 +82,7 @@
 </div>
     </div>
 
-<div class="grey-background hide-on-med-and-down" style=" z-index: 3; position: relative">
+<div class="grey-background hide-on-med-and-down" style=" z-index: 3; position: relative; width: 100%">
     <section class="container sanchez"><H5 style="padding-top: 9%;" class="blue-font menufont">IF YOU'RE THE KIND OF
             TRAVELER WHO:</H5>
     <ul>
@@ -139,26 +140,32 @@
     <br>
 
     {#Promo Table Styling#}
-    <div class="row container sanchez">
+    <div class="row sanchez">
         <div class="col s12 l4">
             <div class="center promo promo-example">
-                <img class="flexWidth" src="/wp-content/themes/twig-wp-theme/static/Icon1.png" alt="Resources">
+                <img class="" src="/wp-content/themes/twig-wp-theme/static/Icon1.png" alt="Resources">
                 <p class="promo-caption">1. Use my free resources!</p>
-                <button class="btn not-rounded grey menufont">EXPLORE TIPS & GUIDES ></button>
+                <a href="/tips-guides">
+                <button class="btn not-rounded grey menufont">EXPLORE TIPS & GUIDES</button>
+                </a>
             </div>
         </div>
         <div class="col s12 l4">
             <div class="center promo promo-example">
-                <img class="flexWidth" src="/wp-content/themes/twig-wp-theme/static/Icon2.png" alt="Hire Me">
+                <img class="" src="/wp-content/themes/twig-wp-theme/static/Icon2.png" alt="Hire Me">
                 <p class="promo-caption">2. Hire me to plan your next trip</p>
-                <button class="btn not-rounded grey menufont">REVIEW MY SERVICES ></button>
+                <a href="/services">
+                <button class="btn not-rounded grey menufont">REVIEW MY SERVICES</button>
+                </a>
             </div>
         </div>
         <div class="col s12 l4">
             <div class="center promo promo-example">
-                <img class="flexWidth" src="/wp-content/themes/twig-wp-theme/static/Icon3.png" alt="Travel With Me!">
-                <p class="promo-caption">3. Travel with me!</p>
-                <button class="btn not-rounded grey menufont">SEE UPCOMING TRIPS ></button>
+                <img class="" src="/wp-content/themes/twig-wp-theme/static/Icon3.png" alt="Travel With Me!">
+                <p class="promo-caption">3. Travel with me!</p> 
+                <a href="/upcoming-trips">
+                <button class="btn not-rounded grey menufont">SEE UPCOMING TRIPS</button>
+                </a>
             </div>
         </div>
     </div>

@@ -14,11 +14,11 @@
                 <div class="row grey-background" style="opacity: 0.9; margin: 0; padding: 0; height: 150px;">
                     <div class="col" style="margin: 0">
                     	<a href="/">
-                    		<img src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/logo.png" style="height: 150px; padding: 5px;" >
+                    		<img src="/wp-content/themes/twig-wp-theme/static/logo.png" style="height: 150px; padding: 5px;" >
                     	</a>
                     </div>
 
-                    <div class="col right" style="padding: 0; width 75%">
+                    <div class="col right" style="padding: 0 0 0 0; width 75%;">
                         <div class="row">
                             {% include "contact.twig" %}
                         </div>
@@ -37,13 +37,17 @@
 		
 		<header class="header hide-on-large-only grey-background">
 			<div class="row">
-				<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-				<img src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/logo.png" style="height: 100px; padding: 5px;  display: block; margin: auto;" class="hide-on-large-only">
-
+				<a href="/" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+				<a href="">
+					<img src="/wp-content/themes/twig-wp-theme/static/logo.png" style="height: 100px; padding: 5px; display: block; margin: auto;" class="hide-on-large-only">	
+				</a>
+				
 
 				<ul id="slide-out" class="side-nav">
 					<li  class="row grey-background">
-						<img src="http://45.79.193.68/wp-content/themes/twig-wp-theme/static/logo.png" style="height: 150px; display: block; margin: auto; padding: 10px">
+						<a href="/home">
+						<img src="/wp-content/themes/twig-wp-theme/static/logo.png" style="height: 150px; display: block; margin: auto; padding: 10px">
+						</a>
 					</li>
                     {% include "menu_mobile.twig"%}
 				</ul>
@@ -55,7 +59,7 @@
 			{#<div class="row menu">#}
                 {#{% include "menu_mobile.twig"%}#}
 			{#</div>#}
-			<div class="blue-border" style="height: 10px">
+			<div class="blue-border" style="height: 10px; width: 100%">
 
 			</div>
 		</header>

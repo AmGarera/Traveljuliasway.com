@@ -37,20 +37,12 @@
         "dataProvider": {
             "map": "worldLow",
             "areas": [
-                { "id": "AU",
-                "modalUrl": "/tag/au/",
-                 "selectable": true},
-                { "id": "US",
-                "modalUrl": "/tag/us/",
-                 "selectable": true},
-                { "id": "FR",
-                "modalUrl": "/tag/fr/",
-                  "selectable": true },
-                { "id": "NZ",
-                "modalUrl": "/tag/nz/",
-      "selectable": true },
-                { "id": "PY" },
-                { "id": "HR" },
+                { "id": "AU"},
+                { "id": "US"},
+                { "id": "FR"},
+                { "id": "NZ"},
+                { "id": "PY"},
+                { "id": "HR"},
                 { "id": "CA" },
                 { "id": "MX" },
                 { "id": "ES" },
@@ -85,16 +77,17 @@
                 { "id": "BL" },
                 { "id": "JM" },
                 { "id": "DO" },
-                { "id": "SG" },
+                { "id": "SP" },
                 { "id": "ID" },
+                 { "id": "BL" },
                 
 
             ]
         },
         
-         "objectList": {
-            "container": "listdiv"
-          },
+        //  "objectList": {
+        //     "container": "listdiv"
+        //   },
 
         /**
          * create areas settings
@@ -114,7 +107,6 @@
         "smallMap": {}
     } );
     
-    
 </script>
 <script>
     
@@ -126,6 +118,7 @@ map.addListener("rollOverMapObject", function(event) {
     if (list[key].innerText == event.mapObject.title) {
       list[key].className = 'selected';
       currentItem = list[key];
+      alert(id + "list")
     }
   }
 });
@@ -137,12 +130,23 @@ map.addListener("rollOutMapObject", function(event) {
 map.addListener("clickMapObject", function(event) {
     // alert("https://twig-twj-amgmetallica.c9users.io/tag/" + event.mapObject.id.toLowerCase());
     // $("#contentMapNonVulgar").show(1);
-    $.fancybox({
-    href: event.mapObject.modalUrl,
-    title: event.mapObject.title,
-    type: "iframe"
-  });
+//     $.fancybox({
+//     href: event.mapObject.modalUrl,
+//     title: event.mapObject.title,
+//     type: "ajax"
+//   });
 });
+
+function selectArea(select) {
+    var id = select;
+    console.log(id)
+    if ( '' == id ) {
+        map.clickMapObject(map.dataProvider);
+    }
+    else {
+        map.clickMapObject(map.getObjectById(id));
+    }
+}
     
 </script>
  <style>
@@ -193,15 +197,121 @@ map.addListener("clickMapObject", function(event) {
     <img src={{countryBanner | resize(400)}}></img>
 <div class="row">
     
-    <div class="col s3" id="listdiv" style="height: 400px; overflow:hidden; overflow-y:scroll;">
-       
+    <div class="col s3 sanchez" id="listdiv" style="height: 400px; overflow:hidden; overflow-y:scroll;">
+            
+        <ul class="collapsible" style="width: 100%" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header">Africa</div>
+          <div class="collapsible-body">
+              <ul>
+                  <li onclick="selectArea('EG')">Egypt</li>  
+              </ul>---------------
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">Asia</div>
+          <div class="collapsible-body">
+              <ul>
+                  <li onclick="selectArea('TH')">Thailand</li>
+                  <li onclick="selectArea('VN')">Viet Nam</li>
+                  <li onclick="selectArea('LA')">Laos</li>
+                  <li onclick="selectArea('KH')">Cambodia</li>
+                  <li onclick="selectArea('CN')">China</li>
+                  <li onclick="selectArea('MY')">Malaysia</li>
+                  <li onclick="selectArea('IN')">India</li>
+                  <li onclick="selectArea('SGP')">Singapore</li>
+                  <li onclick="selectArea('ID')">Indonesia</li>
+                  <li></li>
+              </ul>---------------
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">Central America/Caribbean</div>
+          <div class="collapsible-body">
+              <ul>
+                  <li onclick="selectArea('CR')">Costa Rica</li> 
+                  <li onclick="selectArea('BL')">St. Barth's</li> 
+                  <li onclick="selectArea('JM')">Jamaica</li> 
+                  <li onclick="selectArea('DO')">Dominican Republic</li> 
+              </ul>---------------
+          </div>
+        </li>
+        
+        <li>
+          <div class="collapsible-header">Europe</div>
+          <div class="collapsible-body">
+              <ul>
+                  <li onclick="selectArea('FR')">France</li>  
+                  <li onclick="selectArea('GB')">England</li>  
+                  <li onclick="selectArea('IT')">Italy</li>  
+                  <li onclick="selectArea('ES')">Spain</li>  
+                  <li onclick="selectArea('DE')">Germany</li>  
+                  <li onclick="selectArea('AT')">Austria</li>  
+                  <li onclick="selectArea('CZ')">Czech Republic</li>  
+                  <li onclick="selectArea('HU')">Hungary</li>  
+                  <li onclick="selectArea('GR')">Greece</li>  
+                  <li onclick="selectArea('CH')">Switzerland</li>  
+                  <li onclick="selectArea('NL')">Netherlands</li>  
+                  <li onclick="selectArea('BE')">Belgium</li>   
+                  <li onclick="selectArea('MT')">Malta</li>  
+                  <li onclick="selectArea('LU')">Luxembourg</li>  
+                  <li onclick="selectArea('VR')">Vatican City</li>  
+                  <li onclick="selectArea('MC')">Monaco</li>  
+                  <li onclick="selectArea('HR')">Croatia</li>  
+                  <li onclick="selectArea('SI')">Slovenia</li> 
+              </ul>---------------
+          </div>
+        </li>
+        
+        <li>
+          <div class="collapsible-header">Middle East (Asia)</div>
+          <div class="collapsible-body">
+              <ul>
+                  <li onclick="selectArea('JO')">Jordan</li>
+              </ul>---------------
+          </div>
+        </li>
+        
+        <li>
+          <div class="collapsible-header">North America</div>
+          <div class="collapsible-body">
+              <ul>
+                  <li onclick="selectArea('CA')">Canada</li>
+                  <li onclick="selectArea('MX')">Mexico</li>
+                  <li onclick="selectArea('US')">United States</li>
+              </ul>---------------
+          </div>
+        </li>
+        
+        <li>
+          <div class="collapsible-header">Oceania</div>
+          <div class="collapsible-body">
+              <ul>
+                  <li onclick="selectArea('AU')">Australia</li>
+                  <li onclick="selectArea('NZ')">New Zealand</li>
+                  <li onclick="selectArea('')">Tahiti</li>
+              </ul>---------------
+          </div>
+        </li>
+        
+        <li>
+          <div class="collapsible-header">South America</div>
+          <div class="collapsible-body">
+              <ul>
+                  <li onclick="selectArea('EC')">Ecuador</li>
+              </ul>---------------
+          </div>
+        </li>
+      </ul>
+
     </div>
     
-    <div id="mapdiv" style="width: 70%; height: 400px;" class="col s9"></div>
+    <div id="mapdiv" style=" width: 70%; height: 400px;" class="col s9"></div>
 </div>
 
-    <div id="contentMapNonVulgar" style="padding: 3% ; border-width: 4px; margin-bottom: 50px;" class="container blue-square-border border sanchez">
+    {#<div id="contentMapNonVulgar" style="padding: 3% ; border-width: 4px; margin-bottom: 50px;" class="container blue-square-border border sanchez">#}
         {#{{storyposts}}#}
-    </div>
+    {#</div>#}
 </div>
+<br></br>
 {% endblock %}
