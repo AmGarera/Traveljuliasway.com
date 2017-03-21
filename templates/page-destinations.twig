@@ -37,49 +37,88 @@
         "dataProvider": {
             "map": "worldLow",
             "areas": [
-                { "id": "AU"},
-                { "id": "US"},
-                { "id": "FR"},
-                { "id": "NZ"},
-                { "id": "PY"},
-                { "id": "HR"},
-                { "id": "CA" },
-                { "id": "MX" },
-                { "id": "ES" },
-                { "id": "IT" },
-                { "id": "GB" },
-                { "id": "DE" },
-                { "id": "AT" },
-                { "id": "CZ" },
-                { "id": "HU" },
-                { "id": "GR" },
-                { "id": "CH" },
-                { "id": "NL" },
-                { "id": "BE" },
-                { "id": "EG" },
-                { "id": "JO" },
-                { "id": "TH" },
-                { "id": "VN" },
-                { "id": "LA" },
-                { "id": "KH" },
-                { "id": "CN" },
-                { "id": "MY" },
-                { "id": "MT" },
-                { "id": "IN" },
-                { "id": "PF" },
-                { "id": "LU" },
-                { "id": "CR" },
-                { "id": "EC" },
-                { "id": "VA" },
-                { "id": "MC" },
-                { "id": "HR" },
-                { "id": "SI" },
-                { "id": "BL" },
-                { "id": "JM" },
-                { "id": "DO" },
-                { "id": "SP" },
-                { "id": "ID" },
-                 { "id": "BL" },
+                { "id": "AU",
+                    url:"/tag/australia"
+                },
+                { "id": "US",
+                    url:"/tag/united-states"},
+                { "id": "FR",
+                    url:"/tag/fr"
+                },
+                { "id": "NZ",
+                    url:"/tag/new-zealand"},
+                { "id": "HR",
+                    url:"/tag/croatia"},
+                { "id": "CA",
+                    url:"/tag/canada" },
+                { "id": "MX",
+                    url:"/tag/mexico" },
+                { "id": "ES",
+                    url:"/tag/spain" },
+                { "id": "IT",
+                    url:"/tag/italy" },
+                { "id": "GB",
+                    url:"/tag/england" },
+                { "id": "DE",
+                    url:"/tag/germany" },
+                { "id": "AT",
+                    url:"/tag/austria" },
+                { "id": "CZ",
+                    url:"/tag/czech-republic" },
+                { "id": "HU",
+                    url:"/tag/hungary" },
+                { "id": "GR",
+                    url:"/tag/greece" },
+                { "id": "CH",
+                    url:"/tag/switzerland" },
+                { "id": "NL",
+                    url:"/tag/netherlands" },
+                { "id": "BE",
+                    url:"/tag/belgium" },
+                { "id": "EG",
+                    url:"/tag/egypt" },
+                { "id": "JO",
+                    url:"/tag/jordan" },
+                { "id": "TH",
+                    url:"/tag/thailand" },
+                { "id": "VN",
+                    url:"/tag/vietnam" },
+                { "id": "LA",
+                    url:"/tag/laos" },
+                { "id": "KH",
+                    url:"/tag/cambodia" },
+                { "id": "CN",
+                    url:"/tag/china" },
+                { "id": "MY",
+                    url:"/tag/malaysia" },
+                { "id": "MT",
+                    url:"/tag/malta" },
+                { "id": "IN",
+                    url:"/tag/india" },
+                { "id": "PF",
+                    url:"/tag/french-polynesia" },
+                { "id": "LU",
+                    url:"/tag/luxembourg" },
+                { "id": "CR",
+                    url:"/tag/costa-rica" },
+                { "id": "EC",
+                    url:"/tag/ecuador" },
+                { "id": "VA",
+                    url:"/tag/vatican-city"},
+                { "id": "MC",
+                    url:"/tag/monaco" },
+                { "id": "SI",
+                    url:"/tag/slovenia" },
+                { "id": "BL",
+                    url:"/tag/saint-barthelemy" },
+                { "id": "JM",
+                    url:"/tag/jamaica" },
+                { "id": "DO",
+                    url:"/tag/dominican-republic" },
+                { "id": "SP",
+                    url:"/tag/saint-barthelemy" },
+                { "id": "ID",
+                    url:"/tag/indonesia" },
                 
 
             ]
@@ -204,7 +243,7 @@ function selectArea(select) {
           <div class="collapsible-header">Africa</div>
           <div class="collapsible-body">
               <ul>
-                  <li onclick="selectArea('EG')">Egypt</li>  
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('EG')">Egypt</li>  
               </ul>---------------
           </div>
         </li>
@@ -212,15 +251,15 @@ function selectArea(select) {
           <div class="collapsible-header">Asia</div>
           <div class="collapsible-body">
               <ul>
-                  <li onclick="selectArea('TH')">Thailand</li>
-                  <li onclick="selectArea('VN')">Viet Nam</li>
-                  <li onclick="selectArea('LA')">Laos</li>
-                  <li onclick="selectArea('KH')">Cambodia</li>
-                  <li onclick="selectArea('CN')">China</li>
-                  <li onclick="selectArea('MY')">Malaysia</li>
-                  <li onclick="selectArea('IN')">India</li>
-                  <li onclick="selectArea('SGP')">Singapore</li>
-                  <li onclick="selectArea('ID')">Indonesia</li>
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('TH')">Thailand</li>
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('VN')">Viet Nam</li>
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('LA')">Laos</li>
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('KH')">Cambodia</li>
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('CN')">China</li>
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('MY')">Malaysia</li>
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('IN')">India</li>
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('SGP')">Singapore</li>
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('ID')">Indonesia</li>
                   <li></li>
               </ul>---------------
           </div>
@@ -229,10 +268,10 @@ function selectArea(select) {
           <div class="collapsible-header">Central America/Caribbean</div>
           <div class="collapsible-body">
               <ul>
-                  <li onclick="selectArea('CR')">Costa Rica</li> 
-                  <li onclick="selectArea('BL')">St. Barth's</li> 
-                  <li onclick="selectArea('JM')">Jamaica</li> 
-                  <li onclick="selectArea('DO')">Dominican Republic</li> 
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('CR')">Costa Rica</li> 
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('BL')">St. Barth's</li> 
+                  <li onMouseOver="this.style.cursor='pointer'"onclick="selectArea('JM')">Jamaica</li> 
+                  <li onMouseOver="this.style.cursor='pointer'"onclick="selectArea('DO')">Dominican Republic</li> 
               </ul>---------------
           </div>
         </li>
@@ -241,24 +280,24 @@ function selectArea(select) {
           <div class="collapsible-header">Europe</div>
           <div class="collapsible-body">
               <ul>
-                  <li onclick="selectArea('FR')">France</li>  
-                  <li onclick="selectArea('GB')">England</li>  
-                  <li onclick="selectArea('IT')">Italy</li>  
-                  <li onclick="selectArea('ES')">Spain</li>  
-                  <li onclick="selectArea('DE')">Germany</li>  
-                  <li onclick="selectArea('AT')">Austria</li>  
-                  <li onclick="selectArea('CZ')">Czech Republic</li>  
-                  <li onclick="selectArea('HU')">Hungary</li>  
-                  <li onclick="selectArea('GR')">Greece</li>  
-                  <li onclick="selectArea('CH')">Switzerland</li>  
-                  <li onclick="selectArea('NL')">Netherlands</li>  
-                  <li onclick="selectArea('BE')">Belgium</li>   
-                  <li onclick="selectArea('MT')">Malta</li>  
-                  <li onclick="selectArea('LU')">Luxembourg</li>  
-                  <li onclick="selectArea('VR')">Vatican City</li>  
-                  <li onclick="selectArea('MC')">Monaco</li>  
-                  <li onclick="selectArea('HR')">Croatia</li>  
-                  <li onclick="selectArea('SI')">Slovenia</li> 
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('FR')">France</li> 
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('GB')">England</li>  
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('IT')">Italy</li>  
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('ES')">Spain</li>  
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('DE')">Germany</li>  
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('AT')">Austria</li>  
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('CZ')">Czech Republic</li>  
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('HU')">Hungary</li>  
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('GR')">Greece</li>  
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('CH')">Switzerland</li>  
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('NL')">Netherlands</li>  
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('BE')">Belgium</li>   
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('MT')">Malta</li>  
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('LU')">Luxembourg</li>  
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('VR')">Vatican City</li>  
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('MC')">Monaco</li>  
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('HR')">Croatia</li>  
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('SI')">Slovenia</li> 
               </ul>---------------
           </div>
         </li>
@@ -267,7 +306,7 @@ function selectArea(select) {
           <div class="collapsible-header">Middle East (Asia)</div>
           <div class="collapsible-body">
               <ul>
-                  <li onclick="selectArea('JO')">Jordan</li>
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('JO')">Jordan</li>
               </ul>---------------
           </div>
         </li>
@@ -276,9 +315,9 @@ function selectArea(select) {
           <div class="collapsible-header">North America</div>
           <div class="collapsible-body">
               <ul>
-                  <li onclick="selectArea('CA')">Canada</li>
-                  <li onclick="selectArea('MX')">Mexico</li>
-                  <li onclick="selectArea('US')">United States</li>
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('CA')">Canada</li>
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('MX')">Mexico</li>
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('US')">United States</li>
               </ul>---------------
           </div>
         </li>
@@ -287,9 +326,9 @@ function selectArea(select) {
           <div class="collapsible-header">Oceania</div>
           <div class="collapsible-body">
               <ul>
-                  <li onclick="selectArea('AU')">Australia</li>
-                  <li onclick="selectArea('NZ')">New Zealand</li>
-                  <li onclick="selectArea('')">Tahiti</li>
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('AU')">Australia</li>
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('NZ')">New Zealand</li>
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('')">Tahiti</li>
               </ul>---------------
           </div>
         </li>
@@ -298,7 +337,7 @@ function selectArea(select) {
           <div class="collapsible-header">South America</div>
           <div class="collapsible-body">
               <ul>
-                  <li onclick="selectArea('EC')">Ecuador</li>
+                  <li onMouseOver="this.style.cursor='pointer'" onclick="selectArea('EC')">Ecuador</li>
               </ul>---------------
           </div>
         </li>

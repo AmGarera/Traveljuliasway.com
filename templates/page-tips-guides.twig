@@ -2,6 +2,14 @@
 
 {% block content %}
 
+<style>
+    
+    h5:hover{
+        color: #3c4768;
+    }
+    
+</style>
+
 <div class="slider-for carousel-image">
       <div><img class="responsive-img" src={{tipsguide}} /></div>
 </div>
@@ -11,26 +19,63 @@
     <div><img src={{sig | resize(100)}}></img></div>
     </div>
 </div>
-<div class="container row">
+<div class="row ">
+    <div class="container">
 <!-- Dropdown Trigger -->
-  <h5>City Overviews</h5>
-{{post.content}}
-<br></br>
-<h5>Destination Spotlights</h5>
-{{post.content}}
-<br></br>
-<h5>Logistical Tips</h5>
-{{post.content}}
-<br></br>
-<h5>Partner Highlights</h5>
-{{post.content}}
-<br></br>
-<h5>Travel Ideas</h5>
-{{post.content}}
-<br></br>
-<h5>Reviews – Tours / Hotels</h5>
-{{post.content}}
-<br></br>
+    <h5 onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoOne')">City Overviews</h5>
+    <div id="videoOne">
+        {{post.content}}
+    </div>
+    <br></br>
+    
+    <h5 onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoTwo')">Destination Spotlights</h5>
+    <div id="videoTwo">
+        {{post.content}}
+    </div>
+    <br></br>
+    
+    <h5 onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoThree')">Logistical Tips</h5>
+    <div id="videoThree">
+        {{post.content}}
+    </div>
+    <br></br>
+    
+    <h5 onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoFour')">Partner Highlights</h5>
+    <div id="videoFour">
+        {{post.content}}
+    </div>
+    <br></br>
+    
+    <h5 onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoFive')">Travel Ideas</h5>
+    <div id="videoFive">
+        {{post.content}}
+    </div>
+    <br></br>
+    
+    <h5 onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoSix')">Reviews – Tours / Hotels</h5>
+    <div id="videoSix">
+        {{post.content}}
+    </div>
+    <br></br>
 </div>
+</div>
+<script>
+
+    $("#videoOne").hide();
+    $("#videoTwo").hide();
+    $("#videoThree").hide();
+    $("#videoFour").hide();
+    $("#videoFive").hide();
+    $("#videoSix").hide();
+    
+    
+    function showBox(id){
+        console.log(id)
+    
+        $(id).toggle();
+        
+    }
+    
+</script>
     
 {% endblock %}
