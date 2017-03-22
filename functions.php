@@ -124,13 +124,15 @@ new StarterSite();
 // ));
 
 // $oiContact = iContactApi::getInstance();
+// // $oiContact->setAccountId("OdNFyLiMInjNz010Nyn9cLIsrmtYmVF0");/// Account Id
+// // $oiContact->setClientFolderId("juliatravel");/// Client folder Id
 
 // try{
 
 // 	var_dump($oiContact->addContact('joe@shmoe.com', null, null, 'Joe', 'Shmoe', null, '123 Somewhere Ln', 'Apt 12', 'Somewhere', 'NW', '12345', '123-456-7890', '123-456-7890', null));
 	
-// 	$sFileData = file_get_contents('/path/to/file.csv');  // Read the file
-// 	var_dump($oiContact->uploadData($sFileData, 179962)); // Send the data to the API
+// 	// $sFileData = file_get_contents('/path/to/file.csv');  // Read the file
+// 	// var_dump($oiContact->uploadData($sFileData, 179962)); // Send the data to the API
 	
 // } catch (Exception $oException) { // Catch any exceptions
 // 	// Dump errors
