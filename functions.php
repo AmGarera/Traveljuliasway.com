@@ -91,6 +91,7 @@ class StarterSite extends TimberSite {
 		$context['upcomingtrips'] = "/wp-content/themes/twig-wp-theme/static/UpcomingEvents_hero.png";
 		$context['meetjulia'] = "/wp-content/themes/twig-wp-theme/static/MeetJulia_hero.png";
 		$context['explorecategory'] = "/wp-content/themes/twig-wp-theme/static/ExplorebyCategory_ribbon.png";
+		$context['logistical'] = "[embedyt] https://www.youtube.com/embed?listType=playlist&list=PLEIugdTDCA6pSqhbLl2HOLWriZAZvf5sl&layout=gallery[/embedyt]";
 		return $context;
 	}
 

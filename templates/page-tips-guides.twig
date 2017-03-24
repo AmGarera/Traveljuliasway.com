@@ -8,6 +8,12 @@
         color: #3c4768;
     }
     
+   .forceful {
+       overflow: hidden;
+    white-space: pre;
+    
+    
+   }
 </style>
 
 <div class="slider-for carousel-image">
@@ -27,19 +33,25 @@
 <!-- Dropdown Trigger -->
     <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoOne')">City Overviews</h5>
     <div id="videoOne">
-        {% include "overview.twig" %}
+         {% filter shortcodes %}
+        [the-post-grid id="2750" title="City Overview"]
+         {% endfilter %}
     </div>
     <br></br>
     
     <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoTwo')">Destination Spotlights</h5>
-    <div id="videoTwo">
-        {{post.content}}
+    <div id="videoTwo" class="">
+        {% filter shortcodes %}
+        [the-post-grid id="2703" title="Destination Tips"]
+        {% endfilter %}
     </div>
     <br></br>
     
     <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoThree')">Logistical Tips</h5>
-    <div id="videoThree">
-        {{post.content}}
+    <div id="videoThree" class="">
+        {% filter shortcodes %}
+        [embedyt] https://www.youtube.com/embed?listType=playlist&list=PLEIugdTDCA6rT77oVWpYzaRXRJut70-Xd&layout=gallery[/embedyt]
+        {% endfilter %}
     </div>
     <br></br>
     
@@ -51,13 +63,15 @@
     
     <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoFive')">Travel Ideas</h5>
     <div id="videoFive">
-        {{post.content}}
+        {% filter shortcodes %}
+        [embedyt] https://www.youtube.com/embed?listType=playlist&list=PLEIugdTDCA6qaEJHQEWHPiI989hb9xUJt&layout=gallery[/embedyt]
+        {% endfilter %}
     </div>
     <br></br>
     
     <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoSix')">Reviews – Tours / Hotels</h5>
     <div id="videoSix">
-        {{post.content}}
+        12
     </div>
     <br></br>
 </div>

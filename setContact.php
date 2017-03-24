@@ -4,18 +4,18 @@
 require_once('iContactApi.php');
 
 // Give the API your information
-$appId = 'wlqLNKTB97n5uda3jVBX5sTFcnHaDUX0';
-$apiPassword = 'DamGapStudios';
-$apiUsername = 'julia@mathesontravel.com-beta';
-$accountID = '415542';
-$clientFolderID = '126975';
+$appId = 'oPxyPj4lyNiO9DQbBAw8fn0ehtNnue7e';
+$apiPassword = '2Nk5Jhgt4KeW';
+$apiUsername = 'julia@mathesontravel.com';
+$accountID = '1560023';
+$clientFolderID = '21059';
 
 //Data
 $firstName  = $_POST['firstName'];
 $email = $_POST['email'];
 
 iContactApi::getInstance()
-	->useSandbox(true)   // true use Icontact Sandbox ; false use official icontact 
+	->useSandbox(false)   // true use Icontact Sandbox ; false use official icontact 
 	->setConfig(array(
 	'appId'       => $appId, 
 	'apiPassword' => $apiPassword, 
