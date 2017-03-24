@@ -25,15 +25,14 @@
         color:#3c4768;
     }
 </style>
-
-<div class="col right white-text valign-wrapper" style="background-image: url('http://45.79.193.68/wp-content/themes/twig-wp-theme/static/ribbon_newsletter.png'); background-size: 100% 120%;">
-    <ul style="padding: 0px 15px 0px 45px; margin: 5px 0px 5px 0px">
+<div class="col right white-text valign-wrapper" style="background-image: url('/wp-content/themes/twig-wp-theme/static/ribbon_newsletter.png'); background-size: 100% 100%;">
+    <ul style="padding: 0px 15px 0px 45px; margin: 0px 0px 0px 0px">
         <li style="margin: 5px 0px;">
             <form id="ic_signupform" method="POST" action="https://app.icontact.com/icp/core/mycontacts/signup/designer/form/?id=95&cid=1560023&lid=21059">
                 <span style="font-size: 13pt; color: white;"><b>Get the Latest: </b></span>
-                <input type="text" name="data[fname]" placeholder="First Name" class="special-input grey-font">
-                <input type="text" name="data[email]" placeholder="Email" class="special-input">
-                <span class="white-text button" style="font-size: 13pt;" type="submit">Subscribe </span>
+                <input type="text" id="fname" placeholder="First Name" class="special-input">
+                <input type="text" id="email" placeholder="Email" class="special-input">
+                <a id="submmitNewsletter" class="white-text btn-flat waves-effect" style="font-size: 13pt;" type="submit"><span class="sub">Subscribe</span> </a>
                 <img src="//app.icontact.com/icp/core/signup/tracking.gif?id=null&cid=1560023&lid=21059"/>
             </form>
         </li>
@@ -43,3 +42,26 @@
         <li><a href="" class="valign"><img src={{youtube}} style="height: 30px"></img></a></li>
     </ul>
 </div>
+
+<script>
+    
+    $('#submmitNewsletter').click(function(){
+        console.log("IM ALIVE!");
+        var data = {
+            firstName: document.getElementById("fname").value,
+            email: document.getElementById("email").value
+        };
+        
+        console.log(data);
+
+        
+      $.post('../wp-content/themes/twig-wp-theme/setContact.php',data,function(){
+        }); 
+        
+        Materialize.toast('You have subscribed', 4000)
+        
+        document.getElementById("fname").value = null,
+        document.getElementById("email").value = null
+    });
+    
+</script>

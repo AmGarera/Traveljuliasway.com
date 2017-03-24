@@ -90,8 +90,7 @@ class StarterSite extends TimberSite {
 		$context['services'] = "/wp-content/themes/twig-wp-theme/static/Services_hero.png";
 		$context['upcomingtrips'] = "/wp-content/themes/twig-wp-theme/static/UpcomingEvents_hero.png";
 		$context['meetjulia'] = "/wp-content/themes/twig-wp-theme/static/MeetJulia_hero.png";
-		
-		$context['country'] = new TimberTerm('France');
+		$context['explorecategory'] = "/wp-content/themes/twig-wp-theme/static/ExplorebyCategory_ribbon.png";
 		return $context;
 	}
 
@@ -113,19 +112,29 @@ new StarterSite();
 
 
 
-// 	// Load the iContact library
+// // 	// Load the iContact library
 // require_once('iContactApi.php');
 
 // // Give the API your information
-// iContactApi::getInstance()->setConfig(array(
-// 	'appId'       => 'OdNFyLiMInjNz010Nyn9cLIsrmtYmVF0', 
-// 	'apiPassword' => 'traveljuliasway', 
-// 	'apiUsername' => 'juliatravel'
+// $appId = 'wlqLNKTB97n5uda3jVBX5sTFcnHaDUX0';
+// $apiPassword = 'DamGapStudios';
+// $apiUsername = 'julia@mathesontravel.com-beta';
+
+// iContactApi::getInstance()
+// 	->useSandbox(true)   // true use Icontact Sandbox ; false use official icontact 
+// 	->setConfig(array(
+// 	'appId'       => $appId, 
+// 	'apiPassword' => $apiPassword, 
+// 	'apiUsername' => $apiUsername
 // ));
 
 // $oiContact = iContactApi::getInstance();
 // // $oiContact->setAccountId("OdNFyLiMInjNz010Nyn9cLIsrmtYmVF0");/// Account Id
 // // $oiContact->setClientFolderId("juliatravel");/// Client folder Id
+
+
+// echo $_POST['data'];
+
 
 // try{
 

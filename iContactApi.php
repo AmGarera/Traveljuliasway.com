@@ -90,9 +90,9 @@ class iContactApi {
 	protected function __construct() {
 		// Check for constants
 		$aConstantMap = array(
-			// 'ICONTACT_APIVERSION', 
-			'ICONTACT_APISANDBOXURL' => 'https://app.sandbox.icontact.com/icp/', 
-			'ICONTACT_APPID'       => 'appId', 
+			'ICONTACT_APIVERSION', 
+			'ICONTACT_APISANDBOXURL' => 'https://app.sandbox.icontact.com/icp/a/415542/c/126975/contacts/', 
+			'ICONTACT_APPID'=> 'appId', 
 			// 'ICONTACT_APIURL', 
 			'ICONTACT_APIUSERNAME' => 'apiUsername',  
 			'ICONTACT_APIPASSWORD' => 'apiPassword'

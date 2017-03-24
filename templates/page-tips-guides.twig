@@ -21,38 +21,41 @@
 </div>
 <div class="row ">
     <div class="container">
+        <br></br>
+        <img class="hide-on-med-and-down" src={{explorecategory | resize(500)}}></img>
+        <img class="hide-on-large-only" src={{explorecategory | resize(250)}}></img>
 <!-- Dropdown Trigger -->
-    <h5 onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoOne')">City Overviews</h5>
+    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoOne')">City Overviews</h5>
     <div id="videoOne">
-        {{post.content}}
+        {% include "overview.twig" %}
     </div>
     <br></br>
     
-    <h5 onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoTwo')">Destination Spotlights</h5>
+    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoTwo')">Destination Spotlights</h5>
     <div id="videoTwo">
         {{post.content}}
     </div>
     <br></br>
     
-    <h5 onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoThree')">Logistical Tips</h5>
+    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoThree')">Logistical Tips</h5>
     <div id="videoThree">
         {{post.content}}
     </div>
     <br></br>
     
-    <h5 onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoFour')">Partner Highlights</h5>
+    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoFour')">Partner Highlights</h5>
     <div id="videoFour">
         {{post.content}}
     </div>
     <br></br>
     
-    <h5 onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoFive')">Travel Ideas</h5>
+    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoFive')">Travel Ideas</h5>
     <div id="videoFive">
         {{post.content}}
     </div>
     <br></br>
     
-    <h5 onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoSix')">Reviews – Tours / Hotels</h5>
+    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoSix')">Reviews – Tours / Hotels</h5>
     <div id="videoSix">
         {{post.content}}
     </div>
