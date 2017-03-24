@@ -57,7 +57,9 @@
     
     <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoFour')">Partner Highlights</h5>
     <div id="videoFour">
-        {{post.content}}
+        {% filter shortcodes %}
+        [the-post-grid id="2752" title="Partner Highlights"]
+        {% endfilter %}
     </div>
     <br></br>
     
@@ -71,7 +73,9 @@
     
     <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoSix')">Reviews – Tours / Hotels</h5>
     <div id="videoSix">
-        12
+          {% filter shortcodes %}
+        [the-post-grid id="2754" title="Reviews"]
+         {% endfilter %}
     </div>
     <br></br>
 </div>
