@@ -2,9 +2,9 @@
 
 {% block content %}
 <div class="center">
-	<h2 class="h2 blue-font menufont"><a href="{{post.link}}">{{post.title}}</a></h2>
+	<h2 class="h2 blue-font menufont"><a class="blue-font"href="{{post.link}}">{{post.title}}</a></h2>
 	{% if post.thumbnail.src %}
-			<img class="responsive-img flexWidth" src="{{post.thumbnail.src}}" />
+			<img style="width:15%;" class="responsive-img" src="{{post.thumbnail.src}}" />
 		{% endif %}
 		<p class="sanchez">{{post.get_preview(25)}}</p>
 		</div>
