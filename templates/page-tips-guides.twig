@@ -31,6 +31,53 @@
   color: #3c4768;
 }
 
+
+.tabs-vertical .tabs {
+  height: auto;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column; }
+.tabs-vertical .tab {
+  width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: block;
+  float: left;
+  text-align: left;
+  line-height: 48px;
+  height: 48px;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  text-overflow: ellipsis; }
+  .tabs-vertical .tab .active {
+    -moz-transition: border-color .5s ease;
+    -o-transition: border-color .5s ease;
+    -webkit-transition: border-color .5s ease;
+    transition: border-color .5s ease;
+    border-right: 3px solid #3c4768;
+    color: #3f51b5; }
+  .tabs-vertical .tab a {
+    color: #3c4768;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-transition: color 0.28s ease;
+    -moz-transition: color 0.28s ease;
+    -o-transition: color 0.28s ease;
+    -ms-transition: color 0.28s ease;
+    transition: color 0.28s ease; }
+    .tabs-vertical .tab a:hover {
+      color: #3c4768; }
+  .tabs-vertical .tab.disabled a {
+    color #3c4768;
+    cursor: default; }
+.tabs-vertical .indicator {
+  display: none; }
 </style>
 
 <div class="slider-for carousel-image">
@@ -42,7 +89,7 @@
     <div><img src={{sig | resize(100)}}></img></div>
     </div>
 </div>
-<div class="row ">
+<div class="row">
     <br></br>
     <img class="hide-on-med-and-down" src={{explorecategory | resize(500)}}></img>
     <div class="container">
@@ -50,47 +97,91 @@
         
         <img class="hide-on-large-only" src={{explorecategory | resize(250)}}></img>
 
-    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#contentCity')">City Overviews</h5>
+    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoCity')">City Overviews</h5>
     
     <div id="contentCity">
-        <div class="col s12">
-              <ul class="tabs">
-                <li class="tab col s3"><a class="active" href="#videoCity">Videos</a></li>
-                <li class="tab col s3"><a href="#articleCity">Articles</a></li>
-              </ul>
+        
+        <div class="tabs-vertical row">
+            <div class="col s4 m3 l2">
+                <ul class="tabs">
+                   <li class="tab"><a class="active" href="#videoCity">Videos</a></li>
+                <li class="tab"><a href="#articleCity">Articles</a></li>
+                </ul>
+             </div>
+             <div class="col s8 m9 l6">
+                  <div id="videoCity">
+                     {% filter shortcodes %}
+                   [embedyt] https://www.youtube.com/embed?listType=playlist&list=PLEIugdTDCA6pSqhbLl2HOLWriZAZvf5sl&layout=gallery[/embedyt]
+                     {% endfilter %}
+                 </div>
+                  <div id="articleCity">
+                     {% filter shortcodes %}
+                    [the-post-grid id="2750" title="City Overview"]
+                     {% endfilter %}
+                 </div>
+             </div>
         </div>
-        <div id="videoCity">
-             {% filter shortcodes %}
-           [embedyt] https://www.youtube.com/embed?listType=playlist&list=PLEIugdTDCA6pSqhbLl2HOLWriZAZvf5sl&layout=gallery[/embedyt]
-             {% endfilter %}
-         </div>
-         <div id="articleCity">
-             {% filter shortcodes %}
-            [the-post-grid id="2750" title="City Overview"]
-             {% endfilter %}
-         </div>
+        
+        {#<div class="col s12">#}
+        {#      <ul class="tabs">#}
+        {#        <li class="tab col s3"><a class="active" href="#videoCity">Videos</a></li>#}
+        {#        <li class="tab col s3"><a href="#articleCity">Articles</a></li>#}
+        {#      </ul>#}
+        {#</div>#}
+        {#<div id="videoCity">#}
+        {#     {% filter shortcodes %}#}
+        {#   [embedyt] https://www.youtube.com/embed?listType=playlist&list=PLEIugdTDCA6pSqhbLl2HOLWriZAZvf5sl&layout=gallery[/embedyt]#}
+        {#     {% endfilter %}#}
+        {# </div>#}
+        {# <div id="articleCity">#}
+        {#     {% filter shortcodes %}#}
+        {#    [the-post-grid id="2750" title="City Overview"]#}
+        {#     {% endfilter %}#}
+        {# </div>#}
     </div>
     <br></br>
     
-    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#contentDestination')">Destination Spotlights</h5>
+    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoDestination')">Destination Spotlights</h5>
     
     <div id="contentDestination">
-        <div class="col s12">
-              <ul class="tabs">
-                <li class="tab col s3"><a class="active" href="#videoDestination">Videos</a></li>
-                <li class="tab col s3"><a href="#articleDestinationg">Articles</a></li>
-              </ul>
+        
+        <div class="tabs-vertical row">
+            <div class="col s4 m3 l2">
+                <ul class="tabs">
+                    <li class="tab"><a class="active" href="#videoDestination">Videos</a></li>
+                    <li class="tab"><a href="#articleDestinationg">Articles</a></li>
+                </ul>
+             </div>
+             <div class="col s8 m9 l6">
+                  <div id="videoDestination">
+                        {% filter shortcodes %}
+                        [embedyt] https://www.youtube.com/embed?listType=playlist&list=PLEIugdTDCA6rmK_8Bfh-BxzbaN5cldVn8&layout=gallery[/embedyt]
+                        {% endfilter %}
+                     </div>
+                     <div id="articleDestination">
+                         {% filter shortcodes %}
+                        [the-post-grid id="2703" title="Destination Tips"]
+                         {% endfilter %}
+                     </div>
+             </div>
         </div>
-        <div id="videoDestination">
-            {% filter shortcodes %}
-            [embedyt] https://www.youtube.com/embed?listType=playlist&list=PLEIugdTDCA6rmK_8Bfh-BxzbaN5cldVn8&layout=gallery[/embedyt]
-            {% endfilter %}
-         </div>
-         <div id="articleDestination">
-             {% filter shortcodes %}
-            [the-post-grid id="2703" title="Destination Tips"]
-             {% endfilter %}
-         </div>
+        
+        {#<div class="col s12">#}
+        {#      <ul class="tabs">#}
+        {#        <li class="tab col s3"><a class="active" href="#videoDestination">Videos</a></li>#}
+        {#        <li class="tab col s3"><a href="#articleDestinationg">Articles</a></li>#}
+        {#      </ul>#}
+        {#</div>#}
+        {#<div id="videoDestination">#}
+        {#    {% filter shortcodes %}#}
+        {#    [embedyt] https://www.youtube.com/embed?listType=playlist&list=PLEIugdTDCA6rmK_8Bfh-BxzbaN5cldVn8&layout=gallery[/embedyt]#}
+        {#    {% endfilter %}#}
+        {# </div>#}
+        {# <div id="articleDestination">#}
+        {#     {% filter shortcodes %}#}
+        {#    [the-post-grid id="2703" title="Destination Tips"]#}
+        {#     {% endfilter %}#}
+        {# </div>#}
     </div>
     <br></br>
     
@@ -102,25 +193,48 @@
     </div>
     <br></br>
     
-    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#contentPartner')">Partner Highlights</h5>
+    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoPartner')">Partner Highlights</h5>
     
     <div id="contentPartner">
-        <div class="col s12">
-              <ul class="tabs">
-                <li class="tab col s3"><a class="active" href="#videoPartner">Videos</a></li>
-                <li class="tab col s3"><a href="#articlePartner">Articles</a></li>
-              </ul>
+        
+        <div class="tabs-vertical row">
+            <div class="col s4 m3 l2">
+                <ul class="tabs">
+                    <li class="tab"><a class="active" href="#videoPartner">Videos</a></li>
+                    <li class="tab"><a href="#articlePartner">Articles</a></li>
+                </ul>
+             </div>
+             <div class="col s8 m9 l6">
+                   <div id="videoPartner">
+                        {% filter shortcodes %}
+                        [embedyt] https://www.youtube.com/embed?listType=playlist&list=PLEIugdTDCA6qBCmoLfiGdWEd0CN5YKP_K&layout=gallery[/embedyt]
+                        {% endfilter %}
+                     </div>
+                     <div id="articlePartner">
+                         {% filter shortcodes %}
+                        [the-post-grid id="2752" title="Partner Highlights"]
+                         {% endfilter %}
+                     </div>
+             </div>
         </div>
-        <div id="videoPartner">
-            {% filter shortcodes %}
-            [embedyt] https://www.youtube.com/embed?listType=playlist&list=PLEIugdTDCA6qBCmoLfiGdWEd0CN5YKP_K&layout=gallery[/embedyt]
-            {% endfilter %}
-         </div>
-         <div id="articlePartner">
-             {% filter shortcodes %}
-            [the-post-grid id="2752" title="Partner Highlights"]
-             {% endfilter %}
-         </div>
+        
+        
+        {#<div class="col s12">#}
+        {#      <ul class="tabs">#}
+        {#        <li class="tab col s3"><a class="active" href="#videoPartner">Videos</a></li>#}
+        {#        <li class="tab col s3"><a href="#articlePartner">Articles</a></li>#}
+        {#      </ul>#}
+        {#</div>#}
+        {#<div id="videoPartner">#}
+        {#    {% filter shortcodes %}#}
+        {#    [embedyt] https://www.youtube.com/embed?listType=playlist&list=PLEIugdTDCA6qBCmoLfiGdWEd0CN5YKP_K&layout=gallery[/embedyt]#}
+        {#    {% endfilter %}#}
+        {# </div>#}
+        {# <div id="articlePartner">#}
+        {#     {% filter shortcodes %}#}
+        {#    [the-post-grid id="2752" title="Partner Highlights"]#}
+        {#     {% endfilter %}#}
+        {# </div>#}
     </div>
     <br></br>
     
@@ -133,25 +247,47 @@
     </div>
     <br></br>
     
-    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#contentReview')">Reviews – Tours / Hotels</h5>
+    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoReview')">Reviews – Tours / Hotels</h5>
     
     <div id="contentReview">
-        <div class="col s12">
-              <ul class="tabs">
-                <li class="tab col s3"><a class="active" href="#videoReview">Videos</a></li>
-                <li class="tab col s3"><a href="#articleReview">Articles</a></li>
-              </ul>
+        
+        <div class="tabs-vertical row">
+            <div class="col s4 m3 l2">
+                <ul class="tabs">
+                     <li class="tab"><a class="active" href="#videoReview">Videos</a></li>
+                    <li class="tab"><a href="#articleReview">Articles</a></li>
+                </ul>
+             </div>
+             <div class="col s8 m9 l6">
+                <div id="videoReview">
+                    {% filter shortcodes %}
+                    [embedyt] https://www.youtube.com/embed?listType=playlist&list=PLEIugdTDCA6pffBFoSa4Fwug-ypkLo2wx&layout=gallery[/embedyt]
+                     {% endfilter %}
+                 </div>
+                 <div id="articleReview">
+                     {% filter shortcodes %}
+                    [the-post-grid id="2754" title="Reviews"]
+                     {% endfilter %}
+                 </div>
+             </div>
         </div>
-        <div id="videoReview">
-            {% filter shortcodes %}
-            [embedyt] https://www.youtube.com/embed?listType=playlist&list=PLEIugdTDCA6pffBFoSa4Fwug-ypkLo2wx&layout=gallery[/embedyt]
-             {% endfilter %}
-         </div>
-         <div id="articleReview">
-             {% filter shortcodes %}
-            [the-post-grid id="2754" title="Reviews"]
-             {% endfilter %}
-         </div>
+        
+        {#<div class="col s12">#}
+        {#      <ul class="tabs">#}
+        {#        <li class="tab col s3"><a class="active" href="#videoReview">Videos</a></li>#}
+        {#        <li class="tab col s3"><a href="#articleReview">Articles</a></li>#}
+        {#      </ul>#}
+        {#</div>#}
+        {#<div id="videoReview">#}
+        {#    {% filter shortcodes %}#}
+        {#    [embedyt] https://www.youtube.com/embed?listType=playlist&list=PLEIugdTDCA6pffBFoSa4Fwug-ypkLo2wx&layout=gallery[/embedyt]#}
+        {#     {% endfilter %}#}
+        {# </div>#}
+        {# <div id="articleReview">#}
+        {#     {% filter shortcodes %}#}
+        {#    [the-post-grid id="2754" title="Reviews"]#}
+        {#     {% endfilter %}#}
+        {# </div>#}
     </div>
 
     <br></br>
@@ -159,12 +295,19 @@
 </div>
 <script>
 
-    $("#contentCity").hide();
-    $("#contentDestination").hide();
+    $("#videoCity").hide();
+    $("#videoDestination").hide();
     $("#contentLogic").hide();
-    $("#contentPartner").hide();
+    $("#videoPartner").hide();
     $("#contentIdeas").hide();
-    $("#contentReview").hide();
+    $("#videoReview").hide();
+    
+    $("#articleCity").hide();
+    $("#articleDestination").hide();
+    $("#contentLogic").hide();
+    $("#articlePartner").hide();
+    $("#contentIdeas").hide();
+    $("#articleReview").hide();
     
     
     function showBox(id){
