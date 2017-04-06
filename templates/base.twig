@@ -73,7 +73,8 @@
 		{#</div>#}
 
 		<section id="content" role="main" class="content-wrapper" style="z-index:1;">
-			{% if title %}<h1>{{title}}</h1>{% endif %}
+			<div style=margin-top:170px></div>
+			{% if title %}<h1 class="center-align menufont blue-font">{{title}}</h1>{% endif %}
 			<div class="wrapper {{sidebar_class}}">
 				{% block content %}
 					Sorry, no content

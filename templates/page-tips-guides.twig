@@ -102,7 +102,7 @@
         
         <img class="hide-on-large-only" src={{explorecategory | resize(250)}}></img>
 
-    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoCity')">City Overviews</h5>
+    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#contentCity')">City Overviews</h5>
     
     <div id="contentCity">
         
@@ -146,7 +146,7 @@
     </div>
     <br></br>
     
-    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoDestination')">Destination Spotlights</h5>
+    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#contentDestination')">Destination Spotlights</h5>
     
     <div id="contentDestination">
         
@@ -154,7 +154,7 @@
             <div class="col s4 m3 l2">
                 <ul class="tabs">
                     <li class="tab"><a class="active" href="#videoDestination">Videos</a></li>
-                    <li class="tab"><a href="#articleDestinationg">Articles</a></li>
+                    <li class="tab"><a href="#articleDestination">Articles</a></li>
                 </ul>
              </div>
              <div class="col s8 m9 l6">
@@ -198,14 +198,14 @@
     </div>
     <br></br>
     
-    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoPartner')">Partner Highlights</h5>
+    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#contentPartner')">Partner Highlights</h5>
     
-    <div id="contentPartner">
+    <div id="contentPartner" href="#contentPartner">
         
         <div class="tabs-vertical row">
             <div class="col s4 m3 l2">
                 <ul class="tabs">
-                    <li class="tab"><a class="active" href="#videoPartner">Videos</a></li>
+                    <li class="tab"><a href="#videoPartner">Videos</a></li>
                     <li class="tab"><a href="#articlePartner">Articles</a></li>
                 </ul>
              </div>
@@ -252,7 +252,7 @@
     </div>
     <br></br>
     
-    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#videoReview')">Reviews – Tours / Hotels</h5>
+    <h5 class="menufont" onMouseOver="this.style.cursor='pointer'" onClick="showBox('#contentReview')">Reviews – Tours / Hotels</h5>
     
     <div id="contentReview">
         
@@ -300,19 +300,12 @@
 </div>
 <script>
 
-    $("#videoCity").hide();
-    $("#videoDestination").hide();
+    $("#contentCity").hide();
+    $("#contentDestination").hide();
     $("#contentLogic").hide();
-    $("#videoPartner").hide();
+    $("#contentPartner").hide();
     $("#contentIdeas").hide();
-    $("#videoReview").hide();
-    
-    $("#articleCity").hide();
-    $("#articleDestination").hide();
-    $("#contentLogic").hide();
-    $("#articlePartner").hide();
-    $("#contentIdeas").hide();
-    $("#articleReview").hide();
+    $("#contentReview").hide();
     
     
     function showBox(id){
