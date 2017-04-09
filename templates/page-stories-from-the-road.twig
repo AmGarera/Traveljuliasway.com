@@ -12,11 +12,27 @@
         }
         
         .searchbox-input {
-            width:97%;
+            width:92%;
         }
         
         .fa-search {
             display:none;
+        }
+        
+        /*.reblock {*/
+        /*    margin: 3px !important;*/
+        /*}*/
+
+        /*.preview-block {*/
+        /*    margin: 3px !important;*/
+        /*}*/
+        
+        .reactive-input: {
+            padding: 0px !important;
+        }
+        .searchbox-input input: {
+            padding: 0px !important;
+            width: 100% !important;
         }
 </style>
 <div class="slider-for carousel-image">
@@ -28,10 +44,11 @@
     <br>
 
 
-    <div style="padding: 3% ; border-width: 4px" class="blue-square-border border center article">
+    <div style="padding: 3% ; border-width: 4px; width= 100%" class="blue-square-border border center article">
 
-        <div class="center-align sanchez flex">{{ post.content(1) }}</div>
-                </div> <br></br>
+        <div class="center-align sanchez" style="width: 100%">{{ post.content(1) }}</div>
+                
+    </div> <br></br>
  {#       {% for post in storyposts %}#}
 	{#	{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}#}
 	{#{% endfor %}#}

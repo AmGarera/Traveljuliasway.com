@@ -8,7 +8,7 @@
 
 	<body class="{{body_class}}" data-template="base.twig">
 		
-		<header class="header hide-on-med-and-down" style="z-index:4; position: relative; position:fixed; top:0; width: 100%">
+		<header class="header hide-on-med-and-down" style="z-index:4; position: relative; position:fixed; top:0; width: 100%; margin-bottom:170px">
 			{% block header %}
 			
                 <div class="row grey-background" style="opacity: 0.9; margin: 0; padding: 0; height: 150px;">
@@ -73,9 +73,9 @@
 		{#</div>#}
 
 		<section id="content" role="main" class="content-wrapper" style="z-index:1;">
-			<div style=margin-top:170px></div>
+			<div></div>
 			{% if title %}<h1 class="center-align menufont blue-font">{{title}}</h1>{% endif %}
-			<div class="wrapper {{sidebar_class}}">
+			<div class="wrapper {{sidebar_class}}" style="margin-">
 				{% block content %}
 					Sorry, no content
 				{% endblock %}
