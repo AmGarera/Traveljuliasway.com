@@ -7,6 +7,8 @@
  * WooCommerce) you can delete this file and header.php
  */
 
+
+
 $timberContext = $GLOBALS['timberContext'];
 if ( ! isset( $timberContext ) ) {
 	throw new \Exception( 'Timber context not set in footer.' );

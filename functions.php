@@ -112,7 +112,6 @@ class StarterSite extends TimberSite {
 new StarterSite();
 
 
-
 // // 	// Load the iContact library
 // require_once('iContactApi.php');
 
